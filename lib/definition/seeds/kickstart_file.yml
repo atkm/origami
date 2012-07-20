@@ -1,0 +1,8 @@
+---
+EL:
+  '5': ks5.cfg
+  '6': ks6.cfg
+Deb:
+  '10.04': preseed.cfg
+SuSE:
+  SLES: autoyast.xml

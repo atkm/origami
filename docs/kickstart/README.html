@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.md</title>
+
+</head>
+
+<body>
+
+<h2>ks_alpha</h2>
+
+<p>Building on ks_base. Supports CentOS-[6.2,5.7]-[32,64]-bit and RedHat-6.2-64-bit.
+The purpose is to show building an effective directory hierarchy is plausible
+in conjunction with the current ERB template inheritance emulation scheme.</p>
+
+<h3>Workflow</h3>
+
+<ol>
+<li>write a ruby hash and convert it to yaml (0. or just write a yaml file</li>
+<li>take a look at <code>def initialize</code> of <code>ks_base.rb</code>, where default values of
+installation parameters are specified. Change a value to 'nil' if you
+intend to use a seed file to provide that value.</li>
+<li><p>run <code>ks_builder.rb</code></p>
+
+<p><code>./ks_builder.rb &lt;seed1&gt; &lt;seed2&gt;</code> ... <br>
+**You can feed as many seed files as you need.</p></li>
+</ol>
+
+</body>
+</html>

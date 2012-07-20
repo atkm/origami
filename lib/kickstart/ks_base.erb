@@ -1,0 +1,33 @@
+### kickstart config file based on ks.cfg from
+### CentOS 6.2 x86 definition of veewee
+### a bare-bone template
+
+install
+<%= install_option %>
+lang <%= lang %>
+keyboard <%= keyboard %>
+network <%= network %>
+rootpw <%= rootpw %>
+firewall <%= firewall %>
+authconfig <%= authconfig %>
+selinux <%= selinux %>
+timezone <%= timezone %>
+bootloader <%= bootloader %>
+
+text
+<%= skipx %>
+
+zerombr
+clearpart --all --initlabel
+<%= partition %>
+
+auth --useshadow --passalgo=sha512
+
+firstboot --disabled
+<%= power_option %>
+repo --name="<%= reponame %>"  --baseurl=<%= baseurl %>
+%packages
+<% pkgs.each do |pkg| %>
+<%= pkg %>
+<% end %>
+%end

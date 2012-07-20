@@ -1,0 +1,32 @@
+Veewee::Definition.declare({
+  :cpu_count => '1',
+  :memory_size=> '512',
+  :disk_size => '10140',
+  :disk_format => 'VMDK',
+  :hostiocache => 'off',
+  :ioapic => 'on',
+  :pae => 'on',
+  :os_type_id => <%=os_type_id.inspect %>,
+  :iso_file => <%=iso_file.inspect %>,
+  ## when testing installation, we should have iso file handy. we must.
+  :iso_src => " ",
+  :iso_md5 => " ",
+  :iso_download_timeout => 1000,
+  :boot_wait => "3",
+  ## :boot_cmd_sequence => 
+  ## boot_cmd_sequence is an array
+  :boot_cmd_sequence => <%=boot_cmd_sequence.inspect %>,
+  :kickstart_port => "7122",
+  :kickstart_timeout => 1000,
+  :kickstart_file => <%=kickstart_file.inspect %>,
+  :ssh_login_timeout => "1000",
+  :ssh_user => "root",
+  :ssh_password => "puppet",
+  :ssh_key => "",
+  :ssh_host_port => "7222",
+  :ssh_guest_port => "22",
+  :sudo_cmd => "echo '%p'|sudo -S sh '%f'",
+  :shutdown_cmd => "/sbin/halt -h -p",
+  :postinstall_files => <%= postinstall_files.inspect %>
+  :postinstall_timeout => 1000
+})

@@ -1,0 +1,9 @@
+---
+os_type_id: RedHat6_64
+iso_file: rhel-server-6.2-x86_64-dvd.iso
+boot_cmd_sequence:
+- <Tab> text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
+kickstart_file: ks6.cfg
+postinstall_files:
+- hello.sh
+- typeA.sh

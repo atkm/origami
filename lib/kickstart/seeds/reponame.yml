@@ -1,0 +1,11 @@
+---
+CentOS:
+  '5': ks5.cfg
+  '6': ks6.cfg
+RedHat:
+  '5': ks5.cfg
+  '6': ks6.cfg
+Ubuntu:
+  '10.04': preseed.cfg
+SLES:
+  '11': autoyast.xml

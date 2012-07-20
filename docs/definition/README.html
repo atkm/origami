@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.md</title>
+
+</head>
+
+<body>
+
+<h2>definition_alpha/ -- Directory contents</h2>
+
+<ul>
+<li><p>definition_base.erb : <code>definition.rb</code> with variable replaced with erb codes.</p></li>
+<li><p>definition_base.rb : class DefinitionBase is defined. Note that it
+requires <code>erb_base.rb</code> from <code>~/alpha</code>.</p></li>
+<li><p>definition_builder.rb : <code>ruby definition_builder.rb &lt;erb&gt; &lt;seed&gt;*</code> <br>
+builds a complete template. Of course,
+you need to supply enough seeds.</p></li>
+<li><p>seeds/ : This is where all yaml files for building
+seeds are.</p>
+
+<ul>
+<li>seed_builder.rb : Takes a name of box and create a seed. Note: this was moved to <code>~/bin</code>.</li>
+</ul></li>
+<li><p>os_seeds/ : Put completed seed here.</p></li>
+</ul>
+
+</body>
+</html>

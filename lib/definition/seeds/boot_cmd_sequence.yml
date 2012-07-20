@@ -1,0 +1,15 @@
+---
+EL:
+  '6':
+  - <Tab> text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
+  '5':
+  - linux text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
+Deb:
+  '10.04':
+  - <Esc><Esc><Enter>
+  - ! '/install/vmlinuz noapic preseed/url=http://192.168.100.225/~atsuya/preseed.cfg '
+  - ! 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
+  - ! 'hostname=ubuntu1004srv '
+  - ! 'fb=false debconf/frontend=noninteractive '
+  - ! 'console-setup/ask_detect=false console-setup/modelcode=pc105 console-setup/layoutcode=us '
+  - initrd=/install/initrd.gz -- <Enter>

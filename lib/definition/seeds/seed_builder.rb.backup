@@ -1,0 +1,86 @@
+### definition_seed_builder.rb
+### Input: Distro, version, arch, and type
+###   e.g. 'CentOS-5-32-typeA'
+
+### What it does:
+### 1. Lookup os_type_id.yml, iso_file.yml, boot_cmd_sequence.yml,
+###    and kickstart_file.yml (note, these names correspond to
+###    options in ks.cfg).
+### 2. Get values from those hases.
+### 3. Create a seed file.
+### Output: the seed file content.
+
+### Working as of Jul 16.
+### This is a test; hence note the following:
+### - Supports only CentOS-[5,6]-[32,64]-[typeA,typeB]
+### and RedHat-6-64-[typeA,typeB] (easily expandable).
+### - Does not distinguish 5.x from 5.y, etc.
+### though it doesn't really matter
+### - typeA, typeB are hypothetical extra attributes
+
+require 'yaml'
+
+## The variables to get from yaml files
+erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
+## **Ideally, the assignment should be made via
+## **Product#list_undefined (see: ks_builder.rb)
+
+## Get 1. Distro name, 2. version, and 3. arch
+## The input string format is:
+## <distro>-<version>-<arch>.
+os_info = ARGV[0].split('-')
+distro = os_info[0]
+el = ['CentOS','RedHat','SL','Oracle','EL']
+deb = ['Ubuntu','Debian','Deb']
+suse = ['SuSE','SuSE']
+os_family = [el, deb, suse]
+family = ''
+os_family.each do |type|
+  if type.include?(distro)
+    family = type.last
+  end
+end
+
+version = os_info[1]
+arch = os_info[2]
+len = os_info.length
+## This currently only supports one additional option
+## i.e. typeA and typeB
+if len == 4
+  type = os_info[3]
+end
+
+# OS_TYPE_ID. depends on 'distro' 'version' 'arch'
+# os_type_id.yml is pretty much the same as ostypes.yml
+# but rewriting it to a nested hash serves this better.
+os_type_id_hash = YAML.load_file('os_type_id.yml')
+os_type_id = os_type_id_hash[distro][version][arch]
+
+# ISO name (must be in /veewee/iso/). depends on 'distro' 'version' 'arch'
+iso_file_hash = YAML.load_file('iso_file.yml')
+iso_file = iso_file_hash[distro][version][arch]
+
+# BOOT_CMD_SEQUENCE. depends on 'family' 'version'
+boot_cmd_sequence_hash = YAML.load_file('boot_cmd_sequence.yml')
+boot_cmd_sequence = boot_cmd_sequence_hash[family][version]
+
+# KICK_START_FILE. depends on same as above
+kickstart_file_hash = YAML.load_file('kickstart_file.yml')
+kickstart_file = kickstart_file_hash[family][version]
+
+# POSTINSTALL_FILES. depends on 'distro' 'version' 'type'
+# (and probably a bit on 'arch' as well but not doing that right now)
+postinstall_files_hash = YAML.load_file('postinstall_files.yml')
+postinstall_files = postinstall_files_hash[distro][version][type]
+
+
+hash = {}
+erb_vars.each do |var|
+  hash[var] = eval(var)
+end
+
+if __FILE__ == $0
+  #puts hash.inspect
+  puts hash.to_yaml
+end
+

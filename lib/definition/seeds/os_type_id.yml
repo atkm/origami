@@ -1,0 +1,12 @@
+---
+CentOS:
+  '5':
+    '32': CentOS
+    '64': CentOS_64
+  '6':
+    '32': CentOS
+    '64': CentOS_64
+RedHat:
+  '6':
+    '32': RedHat6
+    '64': RedHat6_64

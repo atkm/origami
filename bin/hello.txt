@@ -1,0 +1,30 @@
+%%%%%%%%%$$$$$$$$$$$$$$$$$$MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$$$$$$$$$$$$$$$$%%%%
+%%%$$$$$$$$$$$$$$$$MMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM$$$$$$$$$$$$$
+$$$$$$$$$$$$MMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMM$$$$$$$
+$$$$$$$MMMMMMMMMMMMMMOOOOOOOOOOOOOOOOObbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbOOOOOOOOOOOOOMMMMMMMMMMM$$$
+$$MMMMMMMMMMMMMOOOOOOOOOOOOObbbbbbbbbbbbbbbbbbttttttttttttttttttttttbbbbbbbbbbbbOOOOOOOOOOOMMMMMMMMM
+MMMMMMMMMOOOOOOOOOOOObbbbbbbbbbbbbbttttttttttttttttt;;;;;;;;;;;;;tttttttttttbbbbbbbbbbOOOOOOOOOMMMMM
+MMMMMOOOOOOOOOOObbbbbbbbbbbbttttttttttttt;;;;;;;;;;;;;::::::::::;;;;;;;;;tttttttttbbbbbbbbOOOOOOOOMM
+MOOOOOOOOOObbbbbbbbbbtttttttttttt;;;;;;;;;;;;;:::::::::..........::::::;;;;;;;ttttttttbbbbbbbOOOOOOO
+OOOOOOObbbbbbbbbtttttttttt;;;;;;;;;;;;::::::::::::.......        .....::::::;;;;;;tttttttbbbbbbbOOOO
+OOObbbbbbbbbtttttttt;;;;;;;;;;;::::::::::::...........             .......::::::;;;;;ttttttbbbbbbbOO
+Obbbbbbbtttttttt;;;;;;;;::::::::::::..........                             ...:::::;;;;;tttttbbbbbbO
+bbbbbtttttt;;;;;;;;::::::::.................                                 ...::::;;;;;ttttttbbbbb
+bbtttttt;;;;;;::::::::......                                                  ...::::;;;;;ttttttbbbb
+ttttt;;;;;:::::::.........                  .    .  .      .   _ _            ....::::;;;;;tttttbbbb
+ttt;;;;::::...........                       \  /   \  /\  /  |_ _           .....::::;;;;;ttttttbbb
+ttt;;;::.                                     \/     \/  \/   |             ......:::::;;;;;tttttbbb
+ttt;;;;::::...........                                                       .....::::;;;;;ttttttbbb
+ttttt;;;;;:::::::.........                                                    ....::::;;;;;tttttbbbb
+bbtttttt;;;;;;::::::::......                                                  ...::::;;;;;ttttttbbbb
+bbbbbtttttt;;;;;;;;::::::::.................                                 ...::::;;;;;ttttttbbbbb
+Obbbbbbbtttttttt;;;;;;;;::::::::::::..........                             ...:::::;;;;;tttttbbbbbbO
+OOObbbbbbbbbtttttttt;;;;;;;;;;;::::::::::::...........             .......::::::;;;;;ttttttbbbbbbbOO
+OOOOOOObbbbbbbbbtttttttttt;;;;;;;;;;;;::::::::::::.......        .....::::::;;;;;;tttttttbbbbbbbOOOO
+MOOOOOOOOOObbbbbbbbbbtttttttttttt;;;;;;;;;;;;;:::::::::..........::::::;;;;;;;ttttttttbbbbbbbOOOOOOO
+MMMMMOOOOOOOOOOObbbbbbbbbbbbttttttttttttt;;;;;;;;;;;;;::::::::::;;;;;;;;;tttttttttbbbbbbbbOOOOOOOOMM
+MMMMMMMMMOOOOOOOOOOOObbbbbbbbbbbbbbttttttttttttttttt;;;;;;;;;;;;;tttttttttttbbbbbbbbbbOOOOOOOOOMMMMM
+$$MMMMMMMMMMMMMOOOOOOOOOOOOObbbbbbbbbbbbbbbbbbttttttttttttttttttttttbbbbbbbbbbbbOOOOOOOOOOOMMMMMMMMM
+$$$$$$$MMMMMMMMMMMMMMOOOOOOOOOOOOOOOOObbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbOOOOOOOOOOOOOMMMMMMMMMMM$$$
+$$$$$$$$$$$$MMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMM$$$$$$$
+%%%$$$$$$$$$$$$$$$$MMMMMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM$$$$$$$$$$$$$

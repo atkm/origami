@@ -1,0 +1,3 @@
+### list of all installation parameters required to complete ks_base.erb
+
+:install_option, :lang, :keyboard, :network, :rootpw, :firewall, :authconfig, :selinux, :timezone, :bootloader, :skipx, :partition, :power_option, :reponame, :baseurl, :pkgs 
