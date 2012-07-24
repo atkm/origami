@@ -9,6 +9,9 @@
 ### 7. (same as 4.)
 ### 8. Launch VM creation (vwf <definition_name>)
 
+### Note:
+###   Must be run from the root directory of the project
+
 require 'config'
 require 'erb_base'
 require 'seed_builder'
@@ -21,7 +24,7 @@ def create_dir(name)
   puts "~/veewee/definition/distro/version/arch/type"
 end
 
-def build_from_seed(name,instruction)
+def build_from_seed(name,instruction,target=nil)
   ks_erb = File.join(ks_dir, 'ks_base.erb')
   defn_erb = File.join(defn_dir, 'definition_base.erb')
   
@@ -29,16 +32,24 @@ def build_from_seed(name,instruction)
   filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb'}[instruction]
   
   seed = seed_builder(name,instruction)
-  File.open(Dir.pwd + '/products/' + name + '_' + filename,'w') do |file|
+  if target == nil
+    target = Dir.pwd + '/products/' 
+  end
+  File.open( File.join( target , name + '_' + filename), 'w') do |file|
     print "Creating #{name}_#{filename}... "
-    file.write(ks_defn_builder(instruction,erb_path, seed))
+    file.write( ks_defn_builder(instruction,erb_path, seed) )
   end 
   puts "Done."
 end
 
 if __FILE__ == $0
-  ARGV.each do |name|
-    build_from_seed(name,'kickstart')
-    build_from_seed(name,'definition')
+  name = ARGV[0]
+  instruction = ARGV[1]
+  if ARGV.length == 3
+    target = ARGV[2]
+  else
+    target = nil
   end
+  build_from_seed(name,'kickstart', target)
+  build_from_seed(name,'definition', target)
 end

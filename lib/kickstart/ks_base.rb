@@ -7,7 +7,7 @@
 ### 
 ### Also see ks_builder.rb, which takes inputs (seed) and creates a complete config file.
 
-require_relative '../erb_base' 
+require 'erb_base' 
 
 class KsBase < Base
   attr_accessor :install_option, :lang, :keyboard, :network, :rootpw, :firewall, :authconfig, :selinux, :timezone, :bootloader, :skipx, :partition, :power_option, :reponame, :baseurl, :pkgs

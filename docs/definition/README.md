@@ -10,7 +10,8 @@
     you need to supply enough seeds.
   
 - seeds/ : This is where all yaml files for building
-  seeds are.
+  seeds are. Seeds are ugly redundant hashes in yaml.
+  I bet using pattern matching will be a huge improvement.
   
   - seed_builder.rb : Takes a name of box and create a seed. Note: this was moved to `~/bin`.
   

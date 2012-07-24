@@ -8,7 +8,7 @@
 ### (or class inheritance is needed at all)
 ### Also see erb_builder.rb, which takes inputs (seed) and creates a complete config file.
 
-require_relative '../erb_base'
+require 'erb_base'
 
 class DefinitionBase < Base
   attr_accessor :os_type_id, :iso_file, :boot_cmd_sequence, :kickstart_file, :postinstall_files

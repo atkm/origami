@@ -27,7 +27,7 @@ firstboot --disabled
 <%= power_option %>
 repo --name="<%= reponame %>"  --baseurl=<%= baseurl %>
 %packages
-<% pkgs.each do |pkg| %>
+<% pkgs.each do |pkg| -%>
 <%= pkg %>
-<% end %>
+<% end -%>
 %end

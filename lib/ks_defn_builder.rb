@@ -12,8 +12,11 @@
 
 require 'erb'
 require 'yaml'
-require_relative 'kickstart/ks_base'
-require_relative 'definition/definition_base'
+#require_relative 'kickstart/ks_base'
+#require_relative 'definition/definition_base'
+require 'kickstart/ks_base'
+require 'definition/definition_base'
+
 
 def ks_defn_builder(instruction,erb,seed)
   tmpl = nil
