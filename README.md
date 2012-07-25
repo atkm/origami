@@ -1,8 +1,8 @@
-# (veewee Fusion Templating Engine) #
+# origami #
 
 * * * * *
 
-A templating engine for veewee's configuration files, which is meant to complement veewee.
+A templating engine for veewee's configuration files, whose goal is to complement veewee.
 It creates working configuration files just from os/distro names. 
 Also, veewee has a poor library of configuration files for its use with Fusion.
 veewee-configuration files created by this program can serve as templates for those who are somewhat familiar with veewee and/or kickstart.
