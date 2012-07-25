@@ -1,3 +1,4 @@
+### Directory containing ks_base.erb and seeds/ directory. The same for definition.
 def ks_dir
   return File.expand_path("~/Code/VWF_templating_engine/lib/kickstart/")
 end

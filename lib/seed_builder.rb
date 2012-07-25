@@ -13,8 +13,8 @@
 
 ### Output: the seed file content.
 
-### Working as of Jul 16.
-### This is a test; hence note the following:
+### This is a test (need to expand it to preseed and autoyast)
+### hence note the following:
 ### - Supports only CentOS-[5,6]-[32,64]-[typeA,typeB]
 ### and RedHat-6-64-[typeA,typeB] (easily expandable).
 ### - Does not distinguish 5.x from 5.y, etc.
@@ -28,6 +28,8 @@
 require 'config'
 require 'yaml'
 
+## Takes a distro name and returns the OS family that
+## it belongs to (i.e. EL, Deb(ian), SuSE)
 def find_family(distro)
   el = ['CentOS','RedHat','SL','Oracle','EL']
   deb = ['Ubuntu','Debian','Deb']
@@ -41,6 +43,7 @@ def find_family(distro)
   end
 end
 
+## Parses the input into an array
 def resolve(ostype)
   info = ostype.split('-')
   distro = info[0]
@@ -51,6 +54,9 @@ def resolve(ostype)
   return distro, version, arch, type, family
 end
 
+## Lots of hardcoded things are in here. If there's any problem running
+## the code, the cause is probably lurking down here.
+## Function: look up hashes (yaml) and get options.
 def get_value(ostype,instruction,opt)
   distro, version, arch, type, family = resolve(ostype)
   
@@ -106,6 +112,7 @@ def get_value(ostype,instruction,opt)
   return source
 end
 
+
 def get_vars(instruction)
   if instruction == 'definition'
     erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
@@ -114,6 +121,7 @@ def get_vars(instruction)
   end
   return erb_vars
 end
+
 
 def check_input(os)
   if  os.split('-').length != 4

@@ -1,16 +1,18 @@
+#!/usr/bin/env ruby
 ### Takes a string of the form <distro>-<version>-<arch>-<type> then
 ### 1. Create a directory inside the hierarchy structure of
 ### '~/veewee/definitions/**'
-### 2. Make kickstart seed (seed_builder.rb kickstart)
+### 2. (assume instruction='kickstart') Make kickstart seed (seed_builder.rb kickstart)
 ### 3. Build kickstart.cfg (ks_builder.rb <ks_seed>)
-### 4. Place it in the directory as well as on a http server
-### 5. Make definition seed (seed_builder.rb definition)
-### 6. Build definition.rb (definition_builder.rb <defn_seed>)
-### 7. (same as 4.)
-### 8. Launch VM creation (vwf <definition_name>)
 
-### Note:
-###   Must be run from the root directory of the project
+### To use it: (== follow veewee instruction)
+### Place definition.rb in the directory && place ks.cfg on a http server
+### Launch VM creation (vwf <definition_name>)
+
+### Usage: build_from_seed.rb <os_name> <instruction> <target>
+### os_name = <distro>-<version>-<arch>-<type>
+### instruction = kickstart or definition
+### target = target directory to place the files in
 
 require 'config'
 require 'erb_base'
@@ -19,11 +21,17 @@ require 'ks_defn_builder'
 require 'kickstart/ks_base'
 require 'definition/definition_base'
 
+## Originally I meant to manage directories from here.
+## It's managed by puppet now.
 def create_dir(name)
   puts "Creating directory for #{name}..."
   puts "~/veewee/definition/distro/version/arch/type"
 end
 
+## The main fucntion.
+## Uses ks_base.erb and definition_base.erb as template.
+## ks_defn_builder creates ks.cfg and definition.rb. (see ks_defn_builder.rb)
+## seed_builder provides a hash that specifies options.
 def build_from_seed(name,instruction,target=nil)
   ks_erb = File.join(ks_dir, 'ks_base.erb')
   defn_erb = File.join(defn_dir, 'definition_base.erb')
