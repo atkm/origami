@@ -1,7 +1,7 @@
 ### Directory containing ks_base.erb and seeds/ directory. The same for definition.
 def ks_dir
-  return File.expand_path("~/Code/VWF_templating_engine/lib/kickstart/")
+  return File.expand_path("~/Code/origami/lib/kickstart/")
 end
 def defn_dir
-  return File.expand_path("~/Code/VWF_templating_engine/lib/definition/")
+  return File.expand_path("~/Code/origami/lib/definition/")
 end

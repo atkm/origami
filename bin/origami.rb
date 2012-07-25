@@ -2,6 +2,8 @@
 ### VMFdefine.rb
 ### Calls build_from_seed.rb
 ### Usage: VMFdefine.rb <name> [<target directory>] [<instruction=--kickstart,--definition>]
+### OR!
+###        VMFdefine.rb --file <file.yml> [<target directory>] :: where <file.yml> contains an array of names
 
 project_path = File.expand_path(
                     File.join(File.dirname(__FILE__), '..', 'lib'))
@@ -17,7 +19,7 @@ if ARGV.length == 0
   print("'VWFdefine --help' for usage\n\n")
 else
   Dir.chdir(File.expand_path("~/Code/VWF_templating_engine"))
-  name = ARGV[0]
+  names = [ARGV[0]]
   
   options = {}
   optparse = OptionParser.new do |opts|
@@ -35,6 +37,11 @@ else
     opts.on('--kickstart') do
       options[:instruction] = 'kickstart'
     end
+
+    options[:file] = nil
+    opts.on('--file FILE') do |file|
+      options[:file] = file
+    end
     
     opts.on('-h','--help') do
       puts opts
@@ -46,12 +53,21 @@ else
   optparse.parse!
 
   target = options[:target]
+
+  if options[:file] != nil
+    require 'yaml'
+    names = YAML.load_file(options[:file])
+  end
   
-  if options[:instruction] == nil
-    build_from_seed(name,'kickstart', target)
-    puts
-    build_from_seed(name,'definition', target)
-  else
-    build_from_seed(name, options[:instruction], target)
+  names.each do |name|
+    if options[:instruction] == nil
+      build_from_seed(name,'kickstart', target)
+      puts
+      build_from_seed(name,'definition', target)
+      puts
+    else
+      build_from_seed(name, options[:instruction], target)
+      puts
+    end
   end
 end
