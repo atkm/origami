@@ -3,6 +3,9 @@ RedHat:
   "6": 
     "64": rhel-server-6.2-x86_64-dvd.iso
     "32": rhel-server-6.2-i386-dvd.iso
+  '5':
+    '32': rhel-5-server-i386-disc1.iso
+    '64': rhel-5-server-x86_64-disc1.iso
 CentOS: 
   "6": 
     "64": CentOS-6.2-x86_64-bin-DVD-1.iso
@@ -10,3 +13,32 @@ CentOS:
   "5": 
     "64": CentOS-5.7-x86_64-bin-DVD-1of2.iso
     "32": CentOS-5.7-i386-bin-DVD-1of2.iso
+Oracle:
+  '5':
+    '32': Oracle-Enterprise-R5-U6-Server-i386-dvd.iso
+    '64': Oracle-Enterprise-R5-U6-Server-x86_64-dvd.iso
+  '6':
+    '32': Oracle-6.2-x86.iso
+    '64': Oracle-6.2-x86_64.iso
+SL:
+  '5':
+    '32': SL.55.051810.DVD.i386.disc1.iso
+    '64': SL.55.051810.DVD.x86_64.disc1.iso
+  '6':
+    '32': SL-62-i386-2012-02-06-Everything-DVD1.iso
+    '64': SL-62-x86_64-2012-02-06-Everything-DVD1.iso
+Debian:
+  '6':
+    '32': debian-6.0.5-i386-DVD-1.iso
+    '64': debian-6.0.5-amd64-DVD-1.iso
+Ubuntu:
+  '10':
+    '32': ubuntu-10.04.4-server-i386.iso
+    '64': ubuntu-10.04.4-server-amd64.iso
+  '12':
+    '32': ubuntu-12.04-server-i386.iso
+    '64': ubuntu-12.04-server-amd64.iso
+SLES:
+  '11':
+    '32': SLES-11-SP2-DVD-i586-GM-DVD1.iso
+    '64': SLES-11-SP2-DVD-x86_64-GM-DVD1.iso

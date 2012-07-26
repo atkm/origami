@@ -3,7 +3,7 @@ EL:
   '6':
   - <Tab> text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
   '5':
-  - linux text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
+  - linux text ks=http://192.168.100.225/~atsuya/ks5.cfg <Enter>
 Deb:
   '10.04':
   - <Esc><Esc><Enter>

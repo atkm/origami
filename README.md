@@ -29,3 +29,8 @@ These yaml files serve as primary configuration file for creating veewee-configu
 These tell the program the looks of `definition.rb` and `ks.cfg` for each distro.
 Different option may have different dependencies (distro, version, arch, type, and any of their combinations), so seed files may look different, as well.
 See `seed_builder.rb`.
+
+
+_Notes_:
+
+1. `mseed.rb` and `namegen.rb` are useful tools for making seeds.
