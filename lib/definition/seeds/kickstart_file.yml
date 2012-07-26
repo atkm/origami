@@ -1,8 +1,27 @@
+### kickstart_file seed complete (July 26)
 ---
-EL:
-  '5': ks5.cfg
-  '6': ks6.cfg
-Deb:
+Ubuntu:
   '10.04': preseed.cfg
-SuSE:
-  SLES: autoyast.xml
+  '12.04': preseed.cfg
+SLES:
+  '11': autoyast.xml
+CentOS:
+  '5':
+  - ks5.cfg
+  '6':
+  - ks6.cfg
+RedHat:
+  '5':
+  - ks5.cfg
+  '6':
+  - ks6.cfg
+Oracle:
+  '5':
+  - ks5.cfg
+  '6':
+  - ks6.cfg
+SL:
+  '5':
+  - ks5.cfg
+  '6':
+  - ks6.cfg

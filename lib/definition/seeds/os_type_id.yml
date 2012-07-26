@@ -1,3 +1,4 @@
+### (July 26) not sure on oracle.
 ---
 CentOS:
   '5':
@@ -7,6 +8,24 @@ CentOS:
     '32': CentOS
     '64': CentOS_64
 RedHat:
+  '5':
+    '32': RedHat5
+    '64': RedHat5_64
   '6':
     '32': RedHat6
     '64': RedHat6_64
+Oracle:
+  '5':
+    '32': Oracle
+    '64': Oracle_64
+  '6':
+    '32': Oracle
+    '64': Oracle_64
+SL:
+  '5':
+    '32': CentOS
+    '64': CentOS_64
+  '6':
+    '32': CentOS
+    '64': CentOS_64
+

@@ -1,3 +1,4 @@
+### (July 26) Complete. 
 ---
 CentOS:
   '5':
@@ -17,6 +18,15 @@ CentOS:
     - hello.sh
     - typeB.sh
 RedHat:
+  '5':
+    typeA:
+    - hello.sh
+    - git-inst.sh
+    - typeA.sh
+    typeB:
+    - hello.sh
+    - git-inst.sh
+    - typeB.sh
   '6':
     typeA:
     - hello.sh
@@ -24,3 +34,38 @@ RedHat:
     typeB:
     - hello.sh
     - typeB.sh
+Oracle:
+  '5':
+    typeA:
+    - hello.sh
+    - git-inst.sh
+    - typeA.sh
+    typeB:
+    - hello.sh
+    - git-inst.sh
+    - typeB.sh
+  '6':
+    typeA:
+    - hello.sh
+    - typeA.sh
+    typeB:
+    - hello.sh
+    - typeB.sh
+SL:
+  '5':
+    typeA:
+    - hello.sh
+    - git-inst.sh
+    - typeA.sh
+    typeB:
+    - hello.sh
+    - git-inst.sh
+    - typeB.sh
+  '6':
+    typeA:
+    - hello.sh
+    - typeA.sh
+    typeB:
+    - hello.sh
+    - typeB.sh
+

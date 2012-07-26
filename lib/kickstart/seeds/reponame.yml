@@ -1,26 +1,14 @@
+### (July 26) Oracle & SL reponame unsure
 ---
-Ubuntu:
-  '10.04': preseed.cfg
-  '12.04': preseed.cfg
-SLES:
-  '11': autoyast.xml
 CentOS:
-  '5':
-  - ks5.cfg
-  '6':
-  - ks6.cfg
+  '5': CentOS
+  '6': CentOS
 RedHat:
-  '5':
-  - ks5.cfg
-  '6':
-  - ks6.cfg
+  '5': Red Hat Enterprise Linux
+  '6': Red Hat Enterprise Linux
 Oracle:
-  '5':
-  - ks5.cfg
-  '6':
-  - ks6.cfg
+  '5': Oracle Repository
+  '6': Oracle Repository
 SL:
-  '5':
-  - ks5.cfg
-  '6':
-  - ks6.cfg
+  '5': Scientific Linux
+  '6': Scientific Linux
