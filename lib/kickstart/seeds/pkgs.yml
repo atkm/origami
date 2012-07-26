@@ -1,0 +1,109 @@
+---
+CentOS:
+  '5':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+  '6':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+RedHat:
+  '5':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+  '6':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+Oracle:
+  '5':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+  '6':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+SL:
+  '5':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+  '6':
+    typeA:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
+    typeB:
+    - ! '@core'
+    - ruby
+    - openssh
+    - openssh-clients
+    - openssh-server
