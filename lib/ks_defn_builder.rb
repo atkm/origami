@@ -17,32 +17,33 @@ require 'yaml'
 require 'kickstart/ks_base'
 require 'definition/definition_base'
 
+module Origami
+  def ks_defn_builder(instruction,erb,seed)
+    tmpl = nil
+    if instruction == 'kickstart'
+      tmpl = KsBase.new
+    elsif instruction == 'definition'
+      tmpl = DefinitionBase.new
+    end 
+    tmpl.load_erb(File.open(erb).read)
 
-def ks_defn_builder(instruction,erb,seed)
-  tmpl = nil
-  if instruction == 'kickstart'
-    tmpl = KsBase.new
-  elsif instruction == 'definition'
-    tmpl = DefinitionBase.new
-  end 
-  tmpl.load_erb(File.open(erb).read)
+    ## Alternative Version: more than one seeds can be fed
+    ## advantage: the user can feed h[is,er] own seed
+    ##            and override the ones that exist in
+    ##            seeds/ directory.
+    ## seeds.each do |yamlfile|
+    ##  hash = YAML.load_file(yamlfile)
+    ##  kscfg.slurp(hash)
+    ## end
 
-  ## Alternative Version: more than one seeds can be fed
-  ## advantage: the user can feed h[is,er] own seed
-  ##            and override the ones that exist in
-  ##            seeds/ directory.
-  ## seeds.each do |yamlfile|
-  ##  hash = YAML.load_file(yamlfile)
-  ##  kscfg.slurp(hash)
-  ## end
+    tmpl.slurp(seed)
+    return tmpl.showoff
+  end
 
-  tmpl.slurp(seed)
-  return tmpl.showoff
-end
-
-if __FILE__ == $0
-  instruction = ARGV[0]
-  erb = ARGV[1]
-  seed = YAML.load_file(ARGV[2])
-  puts ks_defn_builder(instruction,erb,seed)
+  if __FILE__ == $0
+    instruction = ARGV[0]
+    erb = ARGV[1]
+    seed = YAML.load_file(ARGV[2])
+    puts ks_defn_builder(instruction,erb,seed)
+  end
 end
