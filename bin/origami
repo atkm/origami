@@ -15,5 +15,7 @@ end
   
 require 'origami'
 
-options = Origami::Options.parse_args
-Origami.craft(options)
+if __FILE__ == $0
+  options = Origami::Options.parse_args
+  Origami.craft(options)
+end
