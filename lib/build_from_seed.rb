@@ -14,7 +14,7 @@
 ### instruction = kickstart or definition
 ### target = target directory to place the files in
 
-require 'config'
+require 'origami_config'
 require 'erb_base'
 require 'seed_builder'
 require 'ks_defn_builder'
