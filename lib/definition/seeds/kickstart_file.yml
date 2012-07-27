@@ -7,21 +7,21 @@ SLES:
   '11': autoyast.xml
 CentOS:
   '5':
-  - ks5.cfg
+    ks5.cfg
   '6':
-  - ks6.cfg
+    ks6.cfg
 RedHat:
   '5':
-  - ks5.cfg
+    ks5.cfg
   '6':
-  - ks6.cfg
+    ks6.cfg
 Oracle:
   '5':
-  - ks5.cfg
+    ks5.cfg
   '6':
-  - ks6.cfg
+    ks6.cfg
 SL:
   '5':
-  - ks5.cfg
+    ks5.cfg
   '6':
-  - ks6.cfg
+    ks6.cfg
