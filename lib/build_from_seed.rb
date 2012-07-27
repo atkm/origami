@@ -45,11 +45,14 @@ module Origami
     if target == nil
       target = project_root + '/products/' 
     end
+
+    
     File.open( File.join( target , name + '_' + filename), 'w') do |file|
       print "Creating #{name}_#{filename}... "
       file.write( ks_defn_builder(instruction,erb_path, seed) )
     end 
     puts "Done."
+    print("#{instruction} file was created in #{target}.\n\n")
   end
 
   if __FILE__ == $0
