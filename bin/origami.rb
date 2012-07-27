@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
-### VMFdefine.rb
+### origami.rb
 ### Calls build_from_seed.rb
-### Usage: VMFdefine.rb <name> [<target directory>] [<instruction=--kickstart,--definition>]
+### Usage: origami.rb <name> [<target directory>] [<instruction=--kickstart,--definition>]
 ### OR!
-###        VMFdefine.rb --file <file.yml> [<target directory>] :: where <file.yml> contains an array of names
+###        origami.rb --file <file.yml> [<target directory>] :: where <file.yml> contains an array of names
 
 project_path = File.expand_path(
                     File.join(File.dirname(__FILE__), '..', 'lib'))
@@ -16,14 +16,13 @@ require 'optparse'
 if ARGV.length == 0
   piece_of_art = File.new(File.join(File.dirname(__FILE__), 'hello.txt'),'r').read
   print( piece_of_art + "\n")
-  print("'VWFdefine --help' for usage\n\n")
+  print("'origami --help' for usage\n\n")
 else
-  Dir.chdir(File.expand_path("~/Code/VWF_templating_engine"))
   names = [ARGV[0]]
   
   options = {}
   optparse = OptionParser.new do |opts|
-    opts.banner = "Usage: VWFdefine.rb name [options]"
+    opts.banner = "Usage: origami.rb name [options]"
     
     options[:target] = nil
     opts.on('--target DIR') do |dir|
