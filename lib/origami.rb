@@ -11,25 +11,33 @@ require 'optparsing'
 module Origami
   extend self
 
-  names = [ARGV[0]]
-  
-  options = Origami::Options.parse_args
-  target = options[:target]
-  
-  if options[:file] != nil
-    require 'yaml'
-    names = YAML.load_file(options[:file])
+  def project_root
+    File.expand_path(
+                     File.join(File.dirname(__FILE__), '..')
+                     )
   end
+  
+  def craft(options)
     
-  names.each do |name|
-    if options[:instruction] == nil
-      build_from_seed(name,'kickstart', target)
-      puts
-      build_from_seed(name,'definition', target)
-      puts
-      else
-      build_from_seed(name, options[:instruction], target)
-      puts
+    names = options[:name]
+    target = options[:target]
+    
+    if options[:file] != nil
+      require 'yaml'
+      names = YAML.load_file(options[:file])
     end
-  end
-end
+    
+    names.each do |name|
+      if options[:instruction] == nil
+        build_from_seed(name,'kickstart', target)
+        puts
+        build_from_seed(name,'definition', target)
+        puts
+      else
+        build_from_seed(name, options[:instruction], target)
+        puts
+      end
+    end#block
+    
+  end#def
+end#Module

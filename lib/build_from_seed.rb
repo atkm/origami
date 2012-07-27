@@ -43,7 +43,7 @@ module Origami
     
     seed = seed_builder(name,instruction)
     if target == nil
-      target = Dir.pwd + '/products/' 
+      target = project_root + '/products/' 
     end
     File.open( File.join( target , name + '_' + filename), 'w') do |file|
       print "Creating #{name}_#{filename}... "

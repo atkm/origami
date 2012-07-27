@@ -10,6 +10,11 @@ module Origami
       @options = {}
       optparse = OptionParser.new do |opts|
         opts.banner = "Usage: origami.rb name [options]"
+
+        @options[:name] = []
+        opts.on('--name NAME') do |name|
+          @options[:name] << name
+        end
         
         @options[:target] = nil
         opts.on('--target DIR') do |dir|

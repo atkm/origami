@@ -10,9 +10,10 @@ $LOAD_PATH.unshift(project_path) unless $LOAD_PATH.include?(project_path)
 if ARGV.length == 0
   piece_of_art = File.new(File.join(File.dirname(__FILE__), 'hello.txt'),'r').read
   print( piece_of_art + "\n\n")
-  print("'--help' for usage\n\n")
-else
-  
-  require 'origami'
-
+  abort("'--help' for usage\n\n")
 end
+  
+require 'origami'
+
+options = Origami::Options.parse_args
+Origami.craft(options)
