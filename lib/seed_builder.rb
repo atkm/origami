@@ -25,7 +25,7 @@
 ## The input string format is:
 ## <distro>-<version>-<arch>.
 
-require 'config'
+require 'origami_config'
 require 'yaml'
 
 module Origami
