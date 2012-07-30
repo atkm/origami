@@ -6,6 +6,6 @@ Ubuntu:
 SLES:
   '11': autoyast.xml
 EL:
-  '5': ks5.cfg
-  '6': ks6.cfg
+  '5': ks.cfg
+  '6': ks.cfg
   
