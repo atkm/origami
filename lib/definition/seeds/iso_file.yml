@@ -8,8 +8,8 @@ RedHat:
     '64': rhel-5-server-x86_64-disc1.iso
 CentOS: 
   "6": 
-    "64": CentOS-6.2-x86_64-bin-DVD-1.iso
-    "32": CentOS-6.2-i386-bin-DVD-1.iso
+    "64": CentOS-6.2-x86_64-bin-DVD1.iso
+    "32": CentOS-6.2-i386-bin-DVD1.iso
   "5": 
     "64": CentOS-5.7-x86_64-bin-DVD-1of2.iso
     "32": CentOS-5.7-i386-bin-DVD-1of2.iso
