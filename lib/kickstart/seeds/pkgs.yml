@@ -27,6 +27,7 @@ CentOS:
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
 RedHat:
   '5':
     typeA:
@@ -48,12 +49,14 @@ RedHat:
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
 Oracle:
   '5':
     typeA:
@@ -75,12 +78,14 @@ Oracle:
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
 SL:
   '5':
     typeA:
@@ -102,9 +107,11 @@ SL:
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
