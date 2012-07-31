@@ -1,4 +1,7 @@
 ### (July 26) Completed EL entries. typeA and typeB are the same for my convenience.
+###
+### IMPORTANT!!!
+###   All EL 6.x must have "! '@end'" as the last entry of an array.
 ---
 CentOS:
   '5':
@@ -21,6 +24,7 @@ CentOS:
     - openssh
     - openssh-clients
     - openssh-server
+    - ! '%end'
     typeB:
     - ! '@core'
     - ruby
