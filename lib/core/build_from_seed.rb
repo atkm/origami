@@ -15,9 +15,9 @@
 ### target = target directory to place the files in
 
 require 'origami_config'
-require 'erb_base'
-require 'seed_builder'
-require 'ks_defn_builder'
+require 'core/erb_base'
+require 'core/seed_builder'
+require 'core/ks_defn_builder'
 require 'kickstart/ks_base'
 require 'definition/definition_base'
 

@@ -8,7 +8,7 @@
 ### (or class inheritance is needed at all)
 ### Also see erb_builder.rb, which takes inputs (seed) and creates a complete config file.
 
-require 'erb_base'
+#require 'erb_base'
 
 module Origami
   class DefinitionBase < Base
@@ -19,7 +19,8 @@ module Origami
       @os_type_id = nil
       @iso_file = nil
       @boot_cmd_sequence = nil
-      @kickstart_file = nil
+      ## 'kickstart_file' option is deprecated
+      ## @kickstart_file = nil
       @postinstall_files = nil
     end
     

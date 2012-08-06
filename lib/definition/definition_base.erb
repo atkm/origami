@@ -2,13 +2,14 @@ Veewee::Definition.declare({
   :cpu_count => '1',
   :memory_size=> '512',
   :disk_size => '10140',
+  # 'VMDK' for VMFusion, 'VDI' for VirtualBox
   :disk_format => 'VMDK',
   :hostiocache => 'off',
   :ioapic => 'on',
   :pae => 'on',
   :os_type_id => <%=os_type_id.inspect %>,
+  ## no iso_src b/c we don't want it to download it.
   :iso_file => <%=iso_file.inspect %>,
-  ## when testing installation, we should have iso file handy. we must.
   :iso_src => " ",
   :iso_md5 => " ",
   :iso_download_timeout => 1000,
@@ -18,7 +19,10 @@ Veewee::Definition.declare({
   :boot_cmd_sequence => <%=boot_cmd_sequence.inspect %>,
   :kickstart_port => "7122",
   :kickstart_timeout => 1000,
-  :kickstart_file => <%=kickstart_file.inspect %>,
+  # leaving out 'kickstart_file' option turns out to be
+  # the right thing to do. Otherwise veewee starts
+  # a webserver and wait till a kickstart file arrives                            
+  #:kickstart_file => <%=kickstart_file.inspect %>,
   :ssh_login_timeout => "1000",
   :ssh_user => "root",
   :ssh_password => "puppet",

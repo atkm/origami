@@ -75,7 +75,8 @@ module Origami
       'os_type_id' => base_path + '/os_type_id.yml',
       'iso_file' => base_path + '/iso_file.yml',
       'boot_cmd_sequence' => base_path + '/boot_cmd_sequence.yml',
-      'kickstart_file' => base_path + '/kickstart_file.yml',
+      # 'kickstart_file' option is deprecated
+      #'kickstart_file' => base_path + '/kickstart_file.yml',
       'postinstall_files' => base_path + '/postinstall_files.yml',
       ## for ks.cfg
       'reponame' => base_path + '/reponame.yml',
@@ -96,7 +97,8 @@ module Origami
       'os_type_id' => [distro, version, arch],
       'iso_file' => [distro, version, arch],
       'boot_cmd_sequence' => [family,version],
-      'kickstart_file' => [family,version],
+      # 'kickstart_file' option is deprecated
+      #'kickstart_file' => [family,version],
       'postinstall_files' => [distro,version,type],
       'reponame' => [distro,version],
       'pkgs' => [distro,version,type]
@@ -117,7 +119,9 @@ module Origami
 
   def get_vars(instruction)
     if instruction == 'definition'
-      erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
+      # 'kickstart_file' option is deprecated
+      # erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
+      erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','postinstall_files']
     elsif
       erb_vars = ['reponame','pkgs']
     end
