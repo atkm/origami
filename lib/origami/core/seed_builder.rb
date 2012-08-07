@@ -27,35 +27,10 @@
 
 require 'origami_config'
 require 'yaml'
+require 'name_parser'
 
 module Origami
-  
-  ## Takes a distro name and returns the OS family that
-  ## it belongs to (i.e. EL, Deb(ian), SuSE)
-  def find_family(distro)
-    el = ['CentOS','RedHat','SL','Oracle','EL']
-    deb = ['Ubuntu','Debian','Deb']
-    suse = ['SuSE','SuSE']
-    os_family = [el, deb, suse]
-    family = ''
-    os_family.each do |type|
-      if type.include?(distro)
-        return type.last
-      end
-    end
-  end
-
-  ## Parses the input into an array
-  def resolve(ostype)
-    info = ostype.split('-')
-    distro = info[0]
-    version = info[1]
-    arch = info[2]
-    type = info[3]
-    family = find_family(distro) 
-    return distro, version, arch, type, family
-  end
-
+ 
   ## Lots of hardcoded things are in here. If there's any problem running
   ## the code, the cause is probably lurking down here.
   ## Function: look up hashes (yaml) and get options.
