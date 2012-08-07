@@ -6,10 +6,10 @@ module Origami
                             )
   end 
   def ks_dir
-    return project_dir + '/kickstart/'
+    return File.join(project_dir,'origami/kickstart/')
   end
   def defn_dir
-    return project_dir + '/definition/'
+    return File.join(project_dir,'origami/definition/')
   end
   
 end

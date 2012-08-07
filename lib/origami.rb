@@ -5,7 +5,7 @@
 ### OR!
 ###        origami.rb --file <file.yml> [<target directory>] :: where <file.yml> contains an array of names
 
-require 'core/build_from_seed'
+require 'origami/core/build_from_seed'
 require 'optparsing'
 
 module Origami

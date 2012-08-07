@@ -15,11 +15,11 @@
 ### target = target directory to place the files in
 
 require 'origami_config'
-require 'core/erb_base'
-require 'core/seed_builder'
-require 'core/ks_defn_builder'
-require 'kickstart/ks_base'
-require 'definition/definition_base'
+require 'origami/core/erb_base'
+require 'origami/core/seed_builder'
+require 'origami/core/ks_defn_builder'
+require 'origami/kickstart/ks_base'
+require 'origami/definition/definition_base'
 
 module Origami
 

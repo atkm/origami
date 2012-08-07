@@ -3,33 +3,33 @@
 ### IMPORTANT!!!
 ###   All EL 6.x must have "! '@end'" as the last entry of an array.
 ---
+#SUSEgeneric:
+#DEBgeneric:
+ELgeneric:
+    - ! '@core'
 CentOS:
   '5':
     typeA:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
   '6':
     typeA:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
 RedHat:
@@ -38,27 +38,23 @@ RedHat:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
   '6':
     typeA:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
 Oracle:
@@ -67,27 +63,23 @@ Oracle:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
   '6':
     typeA:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
 SL:
@@ -96,26 +88,22 @@ SL:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
   '6':
     typeA:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
     typeB:
     - ! '@core'
     - ruby
     - openssh
-    - openssh-clients
     - openssh-server
     - ! '%end'
