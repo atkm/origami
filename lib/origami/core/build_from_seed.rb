@@ -18,8 +18,8 @@ require 'origami_config'
 require 'origami/core/erb_base'
 require 'origami/core/seed_builder'
 require 'origami/core/ks_defn_builder'
-require 'origami/kickstart/ks_base'
-require 'origami/definition/definition_base'
+require 'origami/inventory/kickstart/ks_base'
+require 'origami/inventory/definition/definition_base'
 
 module Origami
 

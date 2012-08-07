@@ -1,15 +1,45 @@
----
 EL:
   '6':
-  - <Tab> text ks=http://192.168.100.225/~atsuya/ks.cfg <Enter>
+    - '<Tab> text ks=http://192.168.100.225/ks.cfg <Enter>'
   '5':
-  - linux text ks=http://192.168.100.225/~atsuya/ks.cfg <Enter>
+    - 'linux text ks=http://192.168.100.225/ks.cfg <Enter>'
 Deb:
-  '10.04':
-  - <Esc><Esc><Enter>
-  - ! '/install/vmlinuz noapic preseed/url=http://192.168.100.225/~atsuya/preseed.cfg '
-  - ! 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
-  - ! 'hostname=ubuntu1004srv '
-  - ! 'fb=false debconf/frontend=noninteractive '
-  - ! 'console-setup/ask_detect=false console-setup/modelcode=pc105 console-setup/layoutcode=us '
-  - initrd=/install/initrd.gz -- <Enter>
+  '10':
+    - '<Esc><Esc><Enter>'
+    - '/install/vmlinuz noapic preseed/url=http://192.168.100.225/preseed.cfg '
+    - 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
+    - 'hostname=lucid '
+    - 'fb=false debconf/frontend=noninteractive '
+    - 'console-setup/ask_detect=false console-setup/modelcode=pc105 console-setup/layoutcode=us '
+    - 'initrd=/install/initrd.gz -- <Enter>'
+  '12':
+    - '<Esc><Esc><Enter>'
+    - '/install/vmlinuz noapic preseed/url=http://192.168.100.225/preseed.cfg '
+    - 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
+    - 'hostname=precise '
+    - 'fb=false debconf/frontend=noninteractive '
+    - 'keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false '
+    - 'initrd=/install/initrd.gz -- <Enter>'
+  '6':
+    - '<Esc>'
+    - 'install '
+    -  'preseed/url=http://192.168.100.225/preseed.cfg '
+    -  'debian-installer=en_US '
+    -  'auto '
+    -  'locale=en_US '
+    -  'kbd-chooser/method=us '
+    -  'netcfg/get_hostname=%NAME% '
+    -  'netcfg/get_domain=vagrantup.com '
+    -  'fb=false '
+    -  'debconf/frontend=noninteractive '
+    -  'console-setup/ask_detect=false '
+    -  'console-keymaps-at/keymap=us'
+    - '<Enter>'
+SUSE:
+  '11':
+    - '<Esc><Enter>'
+    - 'linux netdevice=eth0 netsetup=dhcp '
+    - 'install=cd:/ '
+    - 'lang=en_US autoyast=http://192.168.100.225/autoinst.xml '
+    - 'textmode=1'
+    - '<Enter>'

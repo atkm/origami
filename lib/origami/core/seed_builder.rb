@@ -27,7 +27,7 @@
 
 require 'origami_config'
 require 'yaml'
-require 'name_parser'
+require 'origami/core/name_parser'
 
 module Origami
  

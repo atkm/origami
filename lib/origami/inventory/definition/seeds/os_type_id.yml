@@ -28,4 +28,18 @@ SL:
   '6':
     '32': CentOS
     '64': CentOS_64
-
+Ubuntu:
+  '10':
+    '32': Ubuntu
+    '64': Ubuntu_64
+  '12':
+    '32': Ubuntu
+    '64': Ubuntu_64
+Debian:
+  '6':
+    '32': Debian6
+    '64': Debian6_64
+SLES:
+  '11':
+    '32': SLES11
+    '64': SLES11_64

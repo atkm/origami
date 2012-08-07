@@ -1,11 +1,15 @@
 ### kickstart_file seed complete (July 26)
+### It turns out omitting 'kickstart_file' option
+### is the right thing to do. 'kickstart_file' => nil
+### keeps veewee from starting a webserver.
 ---
-Ubuntu:
-  '10.04': preseed.cfg
-  '12.04': preseed.cfg
+Deb:
+  '10': 
+  '12':
+  '6':
 SLES:
-  '11': autoyast.xml
+  '11': 
 EL:
-  '5': ks.cfg
-  '6': ks.cfg
+  '5':
+  '6':
   

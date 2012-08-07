@@ -14,8 +14,8 @@ require 'erb'
 require 'yaml'
 #require_relative 'kickstart/ks_base'
 #require_relative 'definition/definition_base'
-require 'origami/kickstart/ks_base'
-require 'origami/definition/definition_base'
+require 'origami/inventory/kickstart/ks_base'
+require 'origami/inventory/definition/definition_base'
 
 module Origami
   def ks_defn_builder(instruction,erb,seed)
