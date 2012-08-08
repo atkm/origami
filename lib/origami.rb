@@ -28,8 +28,11 @@ module Origami
     end
     
     names.each do |name|
+      distro = resolve(name)[0]
+      family = find_family(distro)
+      instruction = {'EL' => 'kickstart','Deb' => 'preseed', 'SUSE' => 'autoyast'}[family]
       if options[:instruction] == nil
-        build_from_seed(name,'kickstart', target)
+        build_from_seed(name, instruction, target)
         puts
         build_from_seed(name,'definition', target)
         puts

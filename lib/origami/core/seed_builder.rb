@@ -34,8 +34,7 @@ module Origami
  
   ## get_value: look up hashes (yaml) and get options.
   def get_value(ostype,instruction,opt)
-    distro, version, arch, type, family = resolve(ostype)
-    deps = dependencies(opt)
+    deps = dependencies(ostype,opt)
     yamlfile = file_location(instruction,opt)
     print "Loading #{yamlfile}... "
     source = YAML.load_file(yamlfile)
@@ -53,12 +52,12 @@ module Origami
     dictionary = {
       'definition' => ['os_type_id','iso_file','boot_cmd_sequence','postinstall_files'],
       'kickstart' => ['reponame','pkgs'],
-      'preseed' => [],
+      'preseed' => ['suite','pkgs'],
       'autoyast' => []
     }
       # 'kickstart_file' option in definition.rb is deprecated
       # erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
-    return erb_vars[instruction]
+    return dictionary[instruction]
   end
 
 

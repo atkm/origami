@@ -37,8 +37,8 @@ module Origami
   def build_from_seed(name,instruction,target=nil)
     ks_erb = File.join(ks_dir, 'ks_base.erb')
     defn_erb = File.join(defn_dir, 'definition_base.erb')
-    autoyast_erb = File.join(ks_dir, 'autoyast_base.erb')
-    preseed_erb = File.join(ks_dir, 'preseed_base.erb')
+    autoyast_erb = File.join(autoyast_dir, 'autoyast_base.erb')
+    preseed_erb = File.join(preseed_dir, 'preseed_base.erb')
     erb_path = {'kickstart' => ks_erb, 'definition' => defn_erb, 'autoyast' => autoyast_erb, 'preseed' => preseed_erb}[instruction]
     filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb', 'autoyast' => 'autoyast.xml', 'preseed' => 'preseed.cfg'}[instruction]
 

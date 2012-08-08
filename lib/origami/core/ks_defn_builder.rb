@@ -14,25 +14,28 @@ require 'erb'
 require 'yaml'
 #require_relative 'kickstart/ks_base'
 #require_relative 'definition/definition_base'
-require 'origami/inventory/kickstart/ks_base'
 require 'origami/inventory/definition/definition_base'
+require 'origami/inventory/kickstart/ks_base'
+require 'origami/inventory/preseed/preseed_base'
+#require 'origami/inventory/autoyast/autoyast_base'
 
 module Origami
   def ks_defn_builder(instruction,erb,seed)
-    tmpl = nil
-    if instruction == 'kickstart'
-      tmpl = KsBase.new
-    # elsif instruction == 'preseed'
-      # tmpl = PreseedBase.new
-    # elsif instruction == 'autoyast'
-      # tmpl = YastBase.new
-    elsif instruction == 'definition'
-      tmpl = DefinitionBase.new
-    end
+    erb_base_path = 'origami/lib/inventory/'
+    dictionary = {
+      'kickstart' => KsBase,
+      #'autoyast' => AutoyastBase,
+      'preseed' => PreseedBase,
+      'definition' => DefinitionBase
+    }
+
+    # Create a instruction-specific base object
+    tmpl = dictionary[instruction].new
+    # ... and read the erb template.
     tmpl.load_erb(File.open(erb).read)
 
     ## This version just accepts one complete seeds.
-        tmpl.slurp(seed)
+    tmpl.slurp(seed)
     ## Alternative Version: more than one seeds can be fed
     ## advantage: the user can feed h[is,er] own seed
     ##            and override the ones that exist in
@@ -42,6 +45,7 @@ module Origami
     ##  kscfg.slurp(hash)
     ## end
 
+    # Return the result of combining erb template and seeds.
     return tmpl.showoff
   end
 

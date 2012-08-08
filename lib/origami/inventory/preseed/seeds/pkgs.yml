@@ -1,0 +1,37 @@
+---
+DEBgeneric:
+    - openssh-server
+    - ntp
+    - vim
+Ubuntu:
+  '10':
+    typeA:
+    - openssh-server
+    - ntp
+    - vim
+    typeB:
+    - openssh-server
+    - ntp
+    - vim
+    - git-core
+  '12':
+    typeA:
+    - openssh-server
+    - ntp
+    - vim
+    typeB:
+    - openssh-server
+    - ntp
+    - vim
+    - git-core
+Debian:
+  '6':
+    typeA:
+    - openssh-server
+    - ntp
+    - vim
+    typeB:
+    - openssh-server
+    - ntp
+    - vim
+    - git-cre

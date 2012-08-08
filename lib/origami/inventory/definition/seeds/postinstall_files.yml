@@ -70,17 +70,24 @@ SL:
     - typeB.sh
 Ubuntu:
   '10':
-    '32':
-    '64':
+    'typeA':
+    - deb1.sh
+    'typeB':
+    - deb2.sh
   '12':
-    '32':
-    '64':
+    'typeA':
+    - deb1.sh
+    'typeB':
+    - deb2.sh
 Debian:
   '6':
-    '32':
-    '64':
+    'typeA':
+    - deb1.sh
+    'typeB':
+    - deb2.sh
 SLES:
   '11':
-    '32':
-    '64':
-
+    'typeA':
+    - deb1.sh
+    'typeB':
+    - deb2.sh
