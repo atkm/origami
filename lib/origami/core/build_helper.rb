@@ -13,7 +13,7 @@ module Origami
       'definition' => defn_dir,
       'kickstart' => ks_dir,
       'preseed' => preseed_dir,
-      'autoyast'=> autoyast_dir
+      'autoinst'=> autoinst_dir
     }
     return File.join(dir[instruction],'seeds')
   end

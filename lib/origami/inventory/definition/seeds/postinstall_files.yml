@@ -88,6 +88,6 @@ Debian:
 SLES:
   '11':
     'typeA':
-    - deb1.sh
+    - sles1.sh
     'typeB':
-    - deb2.sh
+    - sles2.sh

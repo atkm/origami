@@ -31,7 +31,7 @@ module Origami
 
   def choose_instruction(name)
     family = resolve(name)[4]
-    instruction = {'EL' => 'kickstart','Deb' => 'preseed', 'SUSE' => 'autoyast'}
+    instruction = {'EL' => 'kickstart','Deb' => 'preseed', 'SUSE' => 'autoinst'}
     return instruction[family]
   end
 end

@@ -53,7 +53,7 @@ module Origami
       'definition' => ['os_type_id','iso_file','boot_cmd_sequence','postinstall_files'],
       'kickstart' => ['reponame','pkgs'],
       'preseed' => ['suite','pkgs'],
-      'autoyast' => []
+      'autoinst' => []
     }
       # 'kickstart_file' option in definition.rb is deprecated
       # erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
