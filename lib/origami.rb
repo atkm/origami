@@ -20,17 +20,18 @@ module Origami
   def craft(options)
     
     names = options[:name]
-    target = options[:target]
     
     if options[:file] != nil
       require 'yaml'
       names = YAML.load_file(options[:file])
     end
-    
+    build_each(names,options)
+  end
+
+  def build_each(names,options)
+    target = options[:target]
     names.each do |name|
-      distro = resolve(name)[0]
-      family = find_family(distro)
-      instruction = {'EL' => 'kickstart','Deb' => 'preseed', 'SUSE' => 'autoyast'}[family]
+      instruction = choose_instruction(name)
       if options[:instruction] == nil
         build_from_seed(name, instruction, target)
         puts
@@ -40,7 +41,7 @@ module Origami
         build_from_seed(name, options[:instruction], target)
         puts
       end
-    end#block
+    end
+  end
     
-  end#def
 end#Module
