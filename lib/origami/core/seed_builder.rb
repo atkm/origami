@@ -28,59 +28,15 @@
 require 'origami_config'
 require 'yaml'
 require 'origami/core/name_parser'
+require 'origami/core/build_helper'
 
 module Origami
  
-  ## Lots of hardcoded things are in here. If there's any problem running
-  ## the code, the cause is probably lurking down here.
-  ## Function: look up hashes (yaml) and get options.
+  ## get_value: look up hashes (yaml) and get options.
   def get_value(ostype,instruction,opt)
     distro, version, arch, type, family = resolve(ostype)
-    
-    base_path = ''
-    if instruction == 'definition'
-      base_path = File.join(defn_dir,'seeds')
-    elsif instruction == 'kickstart'
-      base_path = File.join(ks_dir,'seeds')
-    end
-
-    ## Locations of yaml files
-    file_locs = {
-      ## for definition.rb
-      'os_type_id' => base_path + '/os_type_id.yml',
-      'iso_file' => base_path + '/iso_file.yml',
-      'boot_cmd_sequence' => base_path + '/boot_cmd_sequence.yml',
-      # 'kickstart_file' option is deprecated
-      #'kickstart_file' => base_path + '/kickstart_file.yml',
-      'postinstall_files' => base_path + '/postinstall_files.yml',
-      ## for ks.cfg
-      'reponame' => base_path + '/reponame.yml',
-      'pkgs' => base_path + '/pkgs.yml'
-    }
-    ## specify dependencies for each config option
-    ## OS_TYPE_ID. depends on 'distro' 'version' 'arch'
-    #  os_type_id.yml is pretty much the same as ostypes.yml
-    #  but rewriting it to a nested hash serves this better.
-    ## ISO name (must be in /veewee/iso/). depends on 'distro' 'version' 'arch'
-    ## BOOT_CMD_SEQUENCE. depends on 'family' 'version'
-    ## KICK_START_FILE. depends on same as above
-    ## POSTINSTALL_FILES. depends on 'distro' 'version' 'type'
-    #  (and probably a bit on 'arch' as well but not doing that right now)
-    ## REPONAME
-    ## PKGS
-    dependencies = {
-      'os_type_id' => [distro, version, arch],
-      'iso_file' => [distro, version, arch],
-      'boot_cmd_sequence' => [family,version],
-      # 'kickstart_file' option is deprecated
-      #'kickstart_file' => [family,version],
-      'postinstall_files' => [distro,version,type],
-      'reponame' => [distro,version],
-      'pkgs' => [distro,version,type]
-    }
-    
-    deps = dependencies[opt]
-    yamlfile = file_locs[opt]
+    deps = dependencies(opt)
+    yamlfile = file_location(instruction,opt)
     print "Loading #{yamlfile}... "
     source = YAML.load_file(yamlfile)
     puts "Done."
@@ -91,16 +47,18 @@ module Origami
     return source
   end
 
-
+  ## get_vars: look up what options must be specified
+  ##           for a given template
   def get_vars(instruction)
-    if instruction == 'definition'
-      # 'kickstart_file' option is deprecated
+    dictionary = {
+      'definition' => ['os_type_id','iso_file','boot_cmd_sequence','postinstall_files'],
+      'kickstart' => ['reponame','pkgs'],
+      'preseed' => [],
+      'autoyast' => []
+    }
+      # 'kickstart_file' option in definition.rb is deprecated
       # erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','kickstart_file','postinstall_files']
-      erb_vars = ['os_type_id','iso_file','boot_cmd_sequence','postinstall_files']
-    elsif
-      erb_vars = ['reponame','pkgs']
-    end
-    return erb_vars
+    return erb_vars[instruction]
   end
 
 
@@ -126,7 +84,7 @@ module Origami
     check_input(os)
     erb_vars = get_vars(instruction)
     distro, version, arch, type, family = resolve(os)
-    seed = get_os_seed(os,instruction,erb_vars)
+    return get_os_seed(os,instruction,erb_vars)
   end
 
   if __FILE__ == $0

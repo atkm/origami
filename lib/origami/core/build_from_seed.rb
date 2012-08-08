@@ -24,12 +24,12 @@ require 'origami/inventory/definition/definition_base'
 module Origami
 
   ## Originally I meant to manage directories from here.
-  ## It's managed by puppet now.
+  ## It will be managed by puppet now.
   def create_dir(name)
     puts "Creating directory for #{name}..."
     puts "~/veewee/definition/distro/version/arch/type"
   end
-  
+
   ## The main fucntion.
   ## Uses ks_base.erb and definition_base.erb as template.
   ## ks_defn_builder creates ks.cfg and definition.rb. (see ks_defn_builder.rb)
@@ -37,20 +37,22 @@ module Origami
   def build_from_seed(name,instruction,target=nil)
     ks_erb = File.join(ks_dir, 'ks_base.erb')
     defn_erb = File.join(defn_dir, 'definition_base.erb')
-    
-    erb_path = {'kickstart' => ks_erb, 'definition' => defn_erb}[instruction]
-    filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb'}[instruction]
-    
+    autoyast_erb = File.join(ks_dir, 'autoyast_base.erb')
+    preseed_erb = File.join(ks_dir, 'preseed_base.erb')
+    erb_path = {'kickstart' => ks_erb, 'definition' => defn_erb, 'autoyast' => autoyast_erb, 'preseed' => preseed_erb}[instruction]
+    filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb', 'autoyast' => 'autoyast.xml', 'preseed' => 'preseed.cfg'}[instruction]
+
     seed = seed_builder(name,instruction)
     if target == nil
-      target = project_root + '/products/' 
+      target = project_root + '/products/'
     end
 
-    
+
     File.open( File.join( target , name + '_' + filename), 'w') do |file|
       print "Creating #{name}_#{filename}... "
-      file.write( ks_defn_builder(instruction,erb_path, seed) )
-    end 
+      content = ks_defn_builder(instruction,erb_path, seed)
+      file.write(content)
+    end
     puts "Done."
     print("#{instruction} file was created in #{target}.\n\n")
   end

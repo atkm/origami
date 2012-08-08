@@ -22,11 +22,17 @@ module Origami
     tmpl = nil
     if instruction == 'kickstart'
       tmpl = KsBase.new
+    # elsif instruction == 'preseed'
+      # tmpl = PreseedBase.new
+    # elsif instruction == 'autoyast'
+      # tmpl = YastBase.new
     elsif instruction == 'definition'
       tmpl = DefinitionBase.new
-    end 
+    end
     tmpl.load_erb(File.open(erb).read)
 
+    ## This version just accepts one complete seeds.
+        tmpl.slurp(seed)
     ## Alternative Version: more than one seeds can be fed
     ## advantage: the user can feed h[is,er] own seed
     ##            and override the ones that exist in
@@ -36,7 +42,6 @@ module Origami
     ##  kscfg.slurp(hash)
     ## end
 
-    tmpl.slurp(seed)
     return tmpl.showoff
   end
 

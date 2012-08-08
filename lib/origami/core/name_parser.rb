@@ -19,7 +19,7 @@ module Origami
   def find_family(distro)
     el = ['CentOS','RedHat','SL','Oracle','EL']
     deb = ['Ubuntu','Debian','Deb']
-    suse = ['SuSE','SuSE']
+    suse = ['SLES','openSUSE','SUSE']
     os_family = [el, deb, suse]
     family = ''
     os_family.each do |type|

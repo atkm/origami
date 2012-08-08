@@ -8,8 +8,14 @@ module Origami
   def ks_dir
     return File.join(project_dir,'origami/inventory/kickstart/')
   end
-  def defn_dir
+   def defn_dir
     return File.join(project_dir,'origami/inventory/definition/')
   end
-  
+   def autoyast_dir
+    return File.join(project_dir,'origami/inventory/autoyast/')
+  end
+  def preseed_dir
+    return File.join(project_dir,'origami/inventory/preseed/')
+  end
+
 end
