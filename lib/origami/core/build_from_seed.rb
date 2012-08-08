@@ -20,6 +20,8 @@ require 'origami/core/seed_builder'
 require 'origami/core/ks_defn_builder'
 require 'origami/inventory/kickstart/ks_base'
 require 'origami/inventory/definition/definition_base'
+require 'origami/inventory/preseed/preseed_base'
+require 'origami/inventory/autoyast/autoyast_base'
 
 module Origami
 
@@ -40,7 +42,7 @@ module Origami
     autoyast_erb = File.join(autoyast_dir, 'autoyast_base.erb')
     preseed_erb = File.join(preseed_dir, 'preseed_base.erb')
     erb_path = {'kickstart' => ks_erb, 'definition' => defn_erb, 'autoyast' => autoyast_erb, 'preseed' => preseed_erb}[instruction]
-    filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb', 'autoyast' => 'autoyast.xml', 'preseed' => 'preseed.cfg'}[instruction]
+    filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb', 'autoyast' => 'autoinst.xml', 'preseed' => 'preseed.cfg'}[instruction]
 
     seed = seed_builder(name,instruction)
     if target == nil

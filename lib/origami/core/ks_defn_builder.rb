@@ -17,14 +17,14 @@ require 'yaml'
 require 'origami/inventory/definition/definition_base'
 require 'origami/inventory/kickstart/ks_base'
 require 'origami/inventory/preseed/preseed_base'
-#require 'origami/inventory/autoyast/autoyast_base'
+require 'origami/inventory/autoyast/autoyast_base'
 
 module Origami
   def ks_defn_builder(instruction,erb,seed)
     erb_base_path = 'origami/lib/inventory/'
     dictionary = {
       'kickstart' => KsBase,
-      #'autoyast' => AutoyastBase,
+      'autoyast' => AutoyastBase,
       'preseed' => PreseedBase,
       'definition' => DefinitionBase
     }

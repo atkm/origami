@@ -28,6 +28,7 @@ Deb:
     - 'auto '
     - 'locale=en_US '
     - 'kbd-chooser/method=us '
+    - 'netcfg/get_hostname=%NAME%'
     - 'netcfg/get_domain=unassigned-domain '
     - 'fb=false '
     - 'debconf/frontend=noninteractive '

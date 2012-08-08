@@ -1,0 +1,6 @@
+---
+Ubuntu:
+  '10': lucid
+  '12': precise
+Debian:
+  '6': squeeze
