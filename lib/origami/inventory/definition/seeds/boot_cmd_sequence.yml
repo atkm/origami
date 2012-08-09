@@ -1,12 +1,12 @@
 EL:
   '6':
-    - '<Tab> text ks=http://192.168.100.225/ks.cfg <Enter>'
+    - "<Tab> text ks=%%SERVER%%/ks.cfg <Enter>"
   '5':
-    - 'linux text ks=http://192.168.100.225/ks.cfg <Enter>'
+    - 'linux text ks=%%SERVER%%/ks.cfg <Enter>'
 Deb:
   '10':
     - '<Esc><Esc><Enter>'
-    - '/install/vmlinuz noapic preseed/url=http://192.168.100.225/preseed.cfg '
+    - '/install/vmlinuz noapic preseed/url=%%SERVER%%/preseed.cfg '
     - 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
     - 'hostname=lucid '
     - 'fb=false debconf/frontend=noninteractive '
@@ -14,7 +14,7 @@ Deb:
     - 'initrd=/install/initrd.gz -- <Enter>'
   '12':
     - '<Esc><Esc><Enter>'
-    - '/install/vmlinuz noapic preseed/url=http://192.168.100.225/preseed.cfg '
+    - '/install/vmlinuz noapic preseed/url=%%SERVER%%/preseed.cfg '
     - 'debian-installer=en_US auto locale=en_US kbd-chooser/method=us '
     - 'hostname=precise '
     - 'fb=false debconf/frontend=noninteractive '
@@ -23,7 +23,7 @@ Deb:
   '6':
     - '<Esc>'
     - 'install '
-    - 'preseed/url=http://192.168.100.225/preseed.cfg '
+    - 'preseed/url=%%SERVER%%/preseed.cfg '
     - 'debian-installer=en_US '
     - 'auto '
     - 'locale=en_US '
@@ -40,6 +40,6 @@ SUSE:
     - '<Esc><Enter>'
     - 'linux netdevice=eth0 netsetup=dhcp '
     - 'install=cd:/ '
-    - 'lang=en_US autoyast=http://192.168.100.225/autoinst.xml '
+    - 'lang=en_US autoyast=%%SERVER%%/autoinst.xml '
     - 'textmode=1'
     - '<Enter>'

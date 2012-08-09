@@ -1,5 +1,8 @@
 ### Directory containing ks_base.erb and seeds/ directory. The same for definition.
 module Origami
+  def ks_file_server
+    return '192.168.100.225'
+  end
   def project_dir
     return File.expand_path(
                             File.join(File.dirname(__FILE__),'../lib')
