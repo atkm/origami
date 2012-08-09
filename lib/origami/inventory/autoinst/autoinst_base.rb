@@ -1,11 +1,10 @@
 ### preseed_base.rb
 
 module Origami
-  class PreseedBase < Base
+  class AutoinstBase < Base
     attr_accessor :pkgs, :suite
     def initialize
       @pkgs = nil
-      @suite = nil
     end
   end #Class
 end

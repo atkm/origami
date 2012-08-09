@@ -1048,6 +1048,9 @@
       <package>libproxy0-config-gnome</package>
       <package>sound-theme-freedesktop</package>
       <package>yast2-trans-en_US</package>
+<% pkgs.each do |pkg| %>
+<%='      <package>' + pkg + "</package>\n" %>
+<% end %>
     </packages>
     <patterns config:type="list">
       <pattern>Minimal</pattern>

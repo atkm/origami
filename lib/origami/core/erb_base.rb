@@ -39,7 +39,8 @@ module Origami
 
     ## load a template (*.erb content)
     def load_erb(erb)
-      @tmpl = ERB.new(erb)
+      # @tmpl = ERB.new(erb)
+      @tmpl = ERB.new(erb,0,"<>")
     end
 
     def get_binding

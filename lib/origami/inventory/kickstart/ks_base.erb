@@ -28,5 +28,5 @@ reboot
 repo --name="<%= reponame %>"  --baseurl=file:///mnt/source
 %packages
 <% pkgs.each do |pkg| %>
-<%= pkg %>
+<%= pkg + "\n" %>
 <% end %>

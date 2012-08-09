@@ -11,8 +11,8 @@ module Origami
    def defn_dir
     return File.join(project_dir,'origami/inventory/definition/')
   end
-   def autoyast_dir
-    return File.join(project_dir,'origami/inventory/autoyast/')
+   def autoinst_dir
+    return File.join(project_dir,'origami/inventory/autoinst/')
   end
   def preseed_dir
     return File.join(project_dir,'origami/inventory/preseed/')

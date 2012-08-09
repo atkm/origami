@@ -1,37 +1,10 @@
 ---
-DEBgeneric:
-    - openssh-server
-    - ntp
-    - vim
-Ubuntu:
-  '10':
+SLES:
+  '11':
     typeA:
-    - openssh-server
-    - ntp
-    - vim
+    - liberation-fonts
+    - emacs
     typeB:
-    - openssh-server
-    - ntp
-    - vim
-    - git-core
-  '12':
-    typeA:
-    - openssh-server
-    - ntp
-    - vim
-    typeB:
-    - openssh-server
-    - ntp
-    - vim
-    - git-core
-Debian:
-  '6':
-    typeA:
-    - openssh-server
-    - ntp
-    - vim
-    typeB:
-    - openssh-server
-    - ntp
-    - vim
-    - git-cre
+    - liberation-fonts
+    - emacs
+
