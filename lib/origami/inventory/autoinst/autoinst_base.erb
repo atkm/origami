@@ -97,6 +97,7 @@
     <FW_CONFIGURATIONS_INT></FW_CONFIGURATIONS_INT>
     <FW_DEV_DMZ></FW_DEV_DMZ>
     <FW_DEV_EXT>any eth0</FW_DEV_EXT>
+    <FW_DEV_EXT>any eth1</FW_DEV_EXT>
     <FW_DEV_INT></FW_DEV_INT>
     <FW_FORWARD_ALWAYS_INOUT_DEV></FW_FORWARD_ALWAYS_INOUT_DEV>
     <FW_FORWARD_MASQ></FW_FORWARD_MASQ>
@@ -597,6 +598,13 @@
         <usercontrol>no</usercontrol>
       </interface>
       <interface>
+        <bootproto>dhcp</bootproto>
+        <device>eth1</device>
+        <name>79c970 [PCnet32 LANCE]</name>
+        <startmode>auto</startmode>
+        <usercontrol>no</usercontrol>
+      </interface>
+      <interface>
         <aliases>
           <alias2>
             <IPADDR>127.0.0.2</IPADDR>
@@ -619,6 +627,11 @@
     <net-udev config:type="list">
       <rule>
         <name>eth0</name>
+        <rule>ATTR{address}</rule>
+        <value>00:0c:29:b4:4d:34</value>
+      </rule>
+      <rule>
+        <name>eth1</name>
         <rule>ATTR{address}</rule>
         <value>00:0c:29:b4:4d:34</value>
       </rule>
