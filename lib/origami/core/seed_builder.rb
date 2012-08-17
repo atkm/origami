@@ -27,7 +27,7 @@
 
 require 'origami_config'
 require 'yaml'
-require 'origami/core/name_parser'
+require 'origami/core/os_name'
 require 'origami/core/build_helper'
 
 module Origami
@@ -82,7 +82,7 @@ module Origami
   def seed_builder(os,instruction)
     check_input(os)
     erb_vars = get_vars(instruction)
-    distro, version, arch, type, family = resolve(os)
+    distro, version, arch, type, family = OSName.new(os).resolve
     return get_os_seed(os,instruction,erb_vars)
   end
 
