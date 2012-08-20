@@ -5,33 +5,45 @@ DEBgeneric:
     - vim
 Ubuntu:
   '10':
-    typeA:
+    PE:
     - openssh-server
     - ntp
     - vim
-    typeB:
-    - openssh-server
-    - ntp
-    - vim
+    - emacs
     - git-core
+    FOSS:
+    - openssh-server
+    - ntp
+    - vim
+    - emacs
+    - git-core
+    - ruby
   '12':
-    typeA:
+    PE:
     - openssh-server
     - ntp
     - vim
-    typeB:
-    - openssh-server
-    - ntp
-    - vim
+    - emacs
     - git-core
+    FOSS:
+    - openssh-server
+    - ntp
+    - vim
+    - emacs
+    - git-core
+    - ruby
 Debian:
   '6':
-    typeA:
+    PE:
     - openssh-server
     - ntp
     - vim
-    typeB:
+    - emacs
+    - git-core
+    FOSS:
     - openssh-server
     - ntp
     - vim
-    - git-cre
+    - emacs
+    - git-core
+    - ruby
