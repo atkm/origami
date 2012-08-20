@@ -70,21 +70,21 @@ SL:
     - typeB.sh
 Ubuntu:
   '10':
-    'typeA':
-    - deb1.sh
-    'typeB':
-    - deb2.sh
+    'PE':
+    - deb.sh
+    'FOSS':
+    - deb.sh
   '12':
-    'typeA':
-    - deb1.sh
-    'typeB':
-    - deb2.sh
+    'PE':
+    - deb.sh
+    'FOSS':
+    - deb.sh
 Debian:
   '6':
-    'typeA':
-    - deb1.sh
-    'typeB':
-    - deb2.sh
+    'PE':
+    - deb.sh
+    'FOSS':
+    - deb.sh
 SLES:
   '11':
     'typeA':
