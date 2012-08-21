@@ -14,7 +14,7 @@ CentOS:
     - openssh
     - openssh-server
     - sysstat
-    - vim
+    - vim-common
     - emacs
     FOSS:
     - ! '@core'
@@ -22,7 +22,7 @@ CentOS:
     - openssh
     - openssh-server
     - sysstat
-    - vim
+    - vim-common
     - emacs
     - ruby
   '6':
