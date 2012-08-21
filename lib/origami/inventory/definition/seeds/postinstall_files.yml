@@ -72,17 +72,17 @@ Ubuntu:
   '10':
     'PE':
     - pe-base-lucid.sh
-    - deb-base.sh
+    - deb-vmwaretools.sh
     'FOSS':
     - foss-base-lucid.sh
-    - deb-base.sh
+    - deb-vmwaretools.sh
   '12':
     'PE':
     - pe-base-precise.sh
-    - deb-base.sh
+    - deb-vmwaretools.sh
     'FOSS':
     - foss-base-precise.sh
-    - deb-base.sh
+    - deb-vmwaretools.sh
 Debian:
   '6':
     'PE':
@@ -91,7 +91,9 @@ Debian:
     - hello.sh
 SLES:
   '11':
-    'typeA':
-    - sles1.sh
-    'typeB':
-    - sles2.sh
+    'PE':
+    - sles-base.sh
+    - sles-vmwaretools.sh
+    'FOSS':
+    - sles-base.sh
+    - sles-vmwaretools.sh
