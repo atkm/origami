@@ -3,71 +3,32 @@
 CentOS:
   '5':
     typeA:
-    - hello.sh
-    - git-inst.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - git-inst.sh
-    - typeB.sh
-  '6':
+    - el-5-base.sh
+   typeB:
+ '6':
     typeA:
-    - hello.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - typeB.sh
+   typeB:
 RedHat:
   '5':
     typeA:
-    - hello.sh
-    - git-inst.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - git-inst.sh
-    - typeB.sh
-  '6':
+   typeB:
+ '6':
     typeA:
-    - hello.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - typeB.sh
+   typeB:
 Oracle:
   '5':
     typeA:
-    - hello.sh
-    - git-inst.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - git-inst.sh
-    - typeB.sh
-  '6':
+   typeB:
+ '6':
     typeA:
-    - hello.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - typeB.sh
+   typeB:
 SL:
   '5':
     typeA:
-    - hello.sh
-    - git-inst.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - git-inst.sh
-    - typeB.sh
-  '6':
+   typeB:
+ '6':
     typeA:
-    - hello.sh
-    - typeA.sh
-    typeB:
-    - hello.sh
-    - typeB.sh
+   typeB:
 Ubuntu:
   '10':
     'PE':
