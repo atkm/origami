@@ -86,9 +86,9 @@ Ubuntu:
 Debian:
   '6':
     'PE':
-    #- deb-base.sh
+    - hello.sh
     'FOSS':
-    #- deb-base.sh
+    - hello.sh
 SLES:
   '11':
     'typeA':
