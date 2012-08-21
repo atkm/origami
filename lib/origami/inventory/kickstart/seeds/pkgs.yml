@@ -44,68 +44,129 @@ CentOS:
     - sysstat
     - vim-common
     - emacs
+    - git
     - ruby
     - ! '%end'
 RedHat:
   '5':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
 Oracle:
   '5':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
 SL:
   '5':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
