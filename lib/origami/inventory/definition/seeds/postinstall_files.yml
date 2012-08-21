@@ -71,14 +71,14 @@ SL:
 Ubuntu:
   '10':
     'PE':
-    - deb.sh
+    - pe-base-lucid.sh
     'FOSS':
-    - deb.sh
+    - foss-base-lucid.sh
   '12':
     'PE':
-    - deb.sh
+    - pe-base-precise.sh
     'FOSS':
-    - deb.sh
+    - foss-base-precise.sh
 Debian:
   '6':
     'PE':
