@@ -100,7 +100,6 @@ Oracle:
     - vim-common
     - emacs
     - gcc
-    - kernel-headers
     FOSS:
     - ! '@core'
     - ntp
@@ -110,7 +109,6 @@ Oracle:
     - vim-common
     - emacs
     - gcc
-    - kernel-headers
     - ruby
   '6':
     PE:
