@@ -25,7 +25,7 @@ CentOS:
     - vim
     - emacs
     - ruby
- '6':
+  '6':
     PE:
     - ! '@core'
     - openssh
