@@ -3,14 +3,18 @@ CentOS:
   '5':
     PE:
     - el-5-base.sh
+    - el-vmwaretools.sh
     - puppetlabs-sshkeys.sh
     FOSS:
     - el-5-base.sh
+    - el-vmwaretools.sh
     - puppetlabs-sshkeys.sh
   '6':
     PE:
+    - el-vmwaretools.sh
     - puppetlabs-sshkeys.sh
     FOSS:
+    - el-vmwaretools.sh
     - puppetlabs-sshkeys.sh
 RedHat:
   '5':

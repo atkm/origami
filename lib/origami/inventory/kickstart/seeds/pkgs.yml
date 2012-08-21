@@ -28,13 +28,23 @@ CentOS:
   '6':
     PE:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
     FOSS:
     - ! '@core'
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
     - ! '%end'
 RedHat:
   '5':
