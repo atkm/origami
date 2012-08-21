@@ -1,49 +1,55 @@
-### (July 26) Complete. 
 ---
 CentOS:
   '5':
-    typeA:
+    PE:
     - el-5-base.sh
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
  '6':
-    typeA:
+    PE:
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
     - puppetlabs-sshkeys.sh
 RedHat:
   '5':
-    typeA:
+    PE:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
  '6':
-    typeA:
+    PE:
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
     - puppetlabs-sshkeys.sh
 Oracle:
   '5':
-    typeA:
+    PE:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
  '6':
-    typeA:
+    PE:
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
     - puppetlabs-sshkeys.sh
 SL:
   '5':
-    typeA:
+    PE:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
+    - el-5-base.sh
     - puppetlabs-sshkeys.sh
  '6':
-    typeA:
+    PE:
     - puppetlabs-sshkeys.sh
-   typeB:
+    FOSS:
     - puppetlabs-sshkeys.sh
 Ubuntu:
   '10':
