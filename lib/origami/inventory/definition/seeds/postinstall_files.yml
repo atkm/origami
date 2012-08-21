@@ -4,57 +4,79 @@ CentOS:
   '5':
     typeA:
     - el-5-base.sh
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
  '6':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
 RedHat:
   '5':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
  '6':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
 Oracle:
   '5':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
  '6':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
 SL:
   '5':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
  '6':
     typeA:
+    - puppetlabs-sshkeys.sh
    typeB:
+    - puppetlabs-sshkeys.sh
 Ubuntu:
   '10':
     'PE':
     - pe-base-lucid.sh
     - deb-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
     'FOSS':
     - foss-base-lucid.sh
     - deb-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
   '12':
     'PE':
     - pe-base-precise.sh
     - deb-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
     'FOSS':
     - foss-base-precise.sh
     - deb-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
 Debian:
   '6':
     'PE':
-    - hello.sh
+    - puppetlabs-sshkeys.sh
     'FOSS':
-    - hello.sh
+    - puppetlabs-sshkeys.sh
 SLES:
   '11':
     'PE':
     - sles-base.sh
     - sles-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
     'FOSS':
     - sles-base.sh
     - sles-vmwaretools.sh
+    - puppetlabs-sshkeys.sh
