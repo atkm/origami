@@ -89,6 +89,7 @@ RedHat:
     - ruby
     - ! '%end'
 Oracle:
+## install gcc and kernel-headers for git and vmwaretools installation.
   '5':
     PE:
     - ! '@core'
@@ -98,6 +99,8 @@ Oracle:
     - sysstat
     - vim-common
     - emacs
+    - gcc
+    - kernel-headers
     FOSS:
     - ! '@core'
     - ntp
@@ -106,6 +109,8 @@ Oracle:
     - sysstat
     - vim-common
     - emacs
+    - gcc
+    - kernel-headers
     - ruby
   '6':
     PE:
