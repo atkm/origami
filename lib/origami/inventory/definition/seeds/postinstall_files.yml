@@ -7,7 +7,7 @@ CentOS:
     FOSS:
     - el-5-base.sh
     - puppetlabs-sshkeys.sh
- '6':
+  '6':
     PE:
     - puppetlabs-sshkeys.sh
     FOSS:
@@ -20,7 +20,7 @@ RedHat:
     FOSS:
     - el-5-base.sh
     - puppetlabs-sshkeys.sh
- '6':
+  '6':
     PE:
     - puppetlabs-sshkeys.sh
     FOSS:
@@ -33,7 +33,7 @@ Oracle:
     FOSS:
     - el-5-base.sh
     - puppetlabs-sshkeys.sh
- '6':
+  '6':
     PE:
     - puppetlabs-sshkeys.sh
     FOSS:
@@ -46,7 +46,7 @@ SL:
     FOSS:
     - el-5-base.sh
     - puppetlabs-sshkeys.sh
- '6':
+  '6':
     PE:
     - puppetlabs-sshkeys.sh
     FOSS:
