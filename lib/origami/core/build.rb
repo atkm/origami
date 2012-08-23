@@ -15,6 +15,7 @@
 ### target = target directory to place the files in
 
 require 'origami_config'
+require 'origami_config_private'
 require 'origami/core/erb_base'
 require 'origami/core/seed_builder'
 require 'origami/core/ks_defn_builder'

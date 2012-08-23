@@ -26,6 +26,7 @@
 ## <distro>-<version>-<arch>.
 
 require 'origami_config'
+require 'origami_config_private'
 require 'yaml'
 require 'origami/core/os_name'
 require 'origami/core/build_helper'
