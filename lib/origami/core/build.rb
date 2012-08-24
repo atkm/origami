@@ -15,6 +15,7 @@
 ### target = target directory to place the files in
 
 require 'origami_config'
+require 'origami_config_private'
 require 'origami/core/erb_base'
 require 'origami/core/seed_builder'
 require 'origami/core/ks_defn_builder'
@@ -32,23 +33,26 @@ module Origami
   ## Uses ks_base.erb and definition_base.erb as template.
   ## ks_defn_builder creates ks.cfg and definition.rb. (see ks_defn_builder.rb)
   ## seed_builder provides a hash that specifies options.
-  def build_from_seed(name,instruction,target=nil)
+  def build(name,instruction,target=nil)
     ks_erb = File.join(ks_dir, 'ks_base.erb')
     defn_erb = File.join(defn_dir, 'definition_base.erb')
     autoinst_erb = File.join(autoinst_dir, 'autoinst_base.erb')
     preseed_erb = File.join(preseed_dir, 'preseed_base.erb')
+
     erb_path = {'kickstart' => ks_erb, 'definition' => defn_erb, 'autoinst' => autoinst_erb, 'preseed' => preseed_erb}[instruction]
+
     filename = {'kickstart' => 'ks.cfg', 'definition' => 'definition.rb', 'autoinst' => 'autoinst.xml', 'preseed' => 'preseed.cfg'}[instruction]
 
+    # build seed 
     seed = seed_builder(name,instruction)
     if target == nil
       target = project_root + '/products/'
     end
 
-
+    # use the seed to create file
     File.open( File.join( target , name + '_' + filename), 'w') do |file|
       print "Creating #{name}_#{filename}... "
-      content = ks_defn_builder(instruction,erb_path, seed)
+      content = ks_defn_builder(instruction, erb_path, seed)
       file.write(content)
     end
     puts "Done."
@@ -63,7 +67,7 @@ module Origami
     else
       target = nil
     end
-    build_from_seed(name,'kickstart', target)
-    build_from_seed(name,'definition', target)
+    build(name,'kickstart', target)
+    build(name,'definition', target)
   end
 end

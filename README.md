@@ -1,36 +1,69 @@
 # origami #
+A templating engine which complements veewee.  
 
-* * * * *
+## Introduction ##
+[veewee](http://github.com/jedi4ever/veewee) makes building virtual machines easy but origami takes a step further and makes the process even easier,
+especially for those who wish to quickly deploy numbers of VMs that are configured differently.
+Without origami a typical workflow of a veewee user would be
 
-A templating engine for veewee's configuration files, whose goal is to complement veewee.
-It creates working configuration files just from os/distro names. 
-Also, veewee has a poor library of configuration files for its use with Fusion.
-veewee-configuration files created by this program can serve as templates for those who are somewhat familiar with veewee and/or kickstart.
+1. Choose a template to work with. 
+2. `veewee define my-CentOS-6.2-server CentOS-6.2-i386-netboot`
+3. Modify `definition.rb` and `ks.cfg`
+4. `veewee build box-name`.
 
-veewee-configuration files = `definition.rb` and kickstart file or `ks.cfg`.
-Although `ks.cfg` is not technically a configuration file for veewee, I do not see any harm in doing so.
-When I say 'configuration file' in the documentation it probably means this program's configuration
-This is about my program, after all.
-I will make it explicit when I refer to `definition.rb` and `ks.cfg`.
+By introducing origami it becomes
 
-`ks_base.erb` and `definition_base.erb` are provided as foundations of veewee-configuration files. These contain bare-minimum information and _no options_ are specified here.
+1. `origami --name CentOS-6.2-i386-server`
+2. `veewee build CentOS-6.2-i386-server`
 
-From here there are few levels of configurations but notably the following two are dealt with in diferent manner:
+Thus origami lets you bypass the editing of templates and initiate building a virtual machine immediately.
+Also, [a wrapper for origami and veewee](http://github.com/akumano/seisan-line) is available!
 
-1. Default configuration (applies to all distros)
-2. Distro-specific configuration
+## Configuration ##
+Managing veewee definitions is cumbersome because it requires you to create a configuration (i.e. `definition.rb` and `ks.cfg`) on a per-distro basis.
+On the other hand, origami maintains configurations on a per-option basis.
+The power of this approach is immense when you need to maintain a long list of VMs.
+For example, if you want to change what packages are installed on your `Oracle-5.8-i386-server`,
+you go to a corresponding yaml file, `pkgs.yml`, which might look like:
 
-### 1. Default configuration ###
-These are options that supposedly do not require any change for all intended purposes. They are defined in `ks_base.rb` and `definition_base.rb`. From a design point of view, this should be done in the same way as distro-specific configuration i.e. there should be a yaml file that holds all default values. (It will be a piece of cake to implement this.)
+    # pkgs.yml
+    ---
+    Oracle:
+      '5.8':
+        server:
+        - openssh-server
+        desktop:
+        - openssh-server
+        - ruby
+      '6':
+        typeA:
+        - openssh-server
+        - git
+        typeB:
+        - openssh-server
+        - git
+        - ruby
+    CentOS:
+      '6': ...
+        .
+        .
+    Ubuntu:
+      '10': ...
+        .
+        .
+        .
+    SLES:
+      '11': ...
 
-### 2. Distro-specific configuration ###
-Distro-specific configuration are, on the other hand, are the primary focus. Under `kickstart/` and `definition/` directories there are `seed/` directories, and they contain yaml files.
-These yaml files serve as primary configuration file for creating veewee-configuration files, which I call _seeds_.
-These tell the program the looks of `definition.rb` and `ks.cfg` for each distro.
-Different option may have different dependencies (distro, version, arch, type, and any of their combinations), so seed files may look different, as well.
-See `seed_builder.rb`.
+and change the corresponding value in the yaml hash.
+Once you edit all yaml files (which may include `boot_cmd_sequence.yml`, `kickstart_file`, and so on), 
+you have a whole ensemble of different flavors of distros that you can start building just from their names.
+I said 'all' in the previous sentence, but the number of yaml files can be small or large,
+depending on your needs.
+You need to create a yaml file for a parameter only if the parameter needs to be varied, and the others, which are fixed for any kind of VM,
+are specified in a master template. The end result is instead of having an ever-growing number of definitions in your `veewee/definitions` directory,
+you just have a fixed number of yaml files to configure installation parameters.
 
-
-_Notes_:
-
-1. `mseed.rb` and `namegen.rb` are useful tools for making seeds.
+### How To ###
+origami was written for [seisan-line](http://github.com/akumano/seisan-line).
+The documentation for seisan-line includes how to use origami.

@@ -93,8 +93,10 @@ apt-mirror-setup apt-setup/use_mirror boolean false
 # debconf-get-selections --install
 ##Use mirror
 d-i mirror/country string us
-d-i mirror/http/hostname string mirrors.cat.pdx.edu
-d-i mirror/http/directory string ubuntu
+d-i mirror/http/hostname string archive.ubuntu.com
+d-i mirror/http/directory string /ubuntu
 d-i mirror/http/proxy string
 
 d-i mirror/suite string <%= suite %>
+d-i mirror/udev/suite string <%= suite %>
+d-i mirror/udev/components multiselect main, restricted, universe

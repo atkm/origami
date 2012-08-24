@@ -1,9 +1,0 @@
----
-os_type_id: CentOS
-iso_file: CentOS-6.2-i386-bin-DVD-1.iso
-boot_cmd_sequence:
-- <Tab> text ks=http://192.168.100.225/~atsuya/ks6.cfg <Enter>
-kickstart_file: ks6.cfg
-postinstall_files:
-- hello.sh
-- typeB.sh

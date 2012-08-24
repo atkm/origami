@@ -30,7 +30,7 @@ module Origami
     #  (and probably a bit on 'arch' as well but not doing that right now)
     ## REPONAME
     ## PKGS
-    distro, version, arch, type, family = resolve(ostype)
+    distro, version, arch, type, family = OSName.new(ostype).resolve
     dictionary = {
       'os_type_id' => [distro, version, arch],
       'iso_file' => [distro, version, arch],
