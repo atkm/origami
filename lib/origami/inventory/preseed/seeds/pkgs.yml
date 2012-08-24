@@ -1,37 +1,43 @@
 ---
-DEBgeneric:
-    - openssh-server
-    - ntp
-    - vim
+# Note on Ubuntu:
+# emacs, git-core needs to be installed for PE
+# In addition, ruby is required for FOSS
+# The iso doesn't have those in it so
+# they are installed by post scripts
 Ubuntu:
   '10':
-    typeA:
+    PE:
     - openssh-server
     - ntp
     - vim
-    typeB:
+    FOSS:
     - openssh-server
     - ntp
     - vim
-    - git-core
   '12':
-    typeA:
+    PE:
     - openssh-server
     - ntp
     - vim
-    typeB:
+    FOSS:
     - openssh-server
     - ntp
     - vim
-    - git-core
 Debian:
   '6':
-    typeA:
+    PE:
     - openssh-server
     - ntp
+    - sysstat
     - vim
-    typeB:
+    - emacs
+    - git-core
+    FOSS:
     - openssh-server
     - ntp
+    - sysstat
     - vim
-    - git-cre
+    - emacs
+    - git-core
+    - ruby
+

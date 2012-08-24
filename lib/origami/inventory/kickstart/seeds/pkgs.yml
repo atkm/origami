@@ -1,109 +1,175 @@
-### (July 26) Completed EL entries. typeA and typeB are the same for my convenience.
+### (July 26) Completed EL entries. typeA and FOSS are the same for my convenience.
 ###
 ### IMPORTANT!!!
-###   All EL 6.x must have "! '@end'" as the last entry of an array.
+###   All EL 6.x must have "! '%end'" as the last entry of an array.
+###   This is due to a change in ks.cfg format between EL5 and 6.
+###   Since the anaconda installer for EL6 each section needs to
+###   end with a end tag.
 ---
-#SUSEgeneric:
-#DEBgeneric:
-ELgeneric:
-    - ! '@core'
 CentOS:
   '5':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
-    typeB:
+    - sysstat
+    - vim-common
+    - emacs
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
-    typeB:
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
 RedHat:
   '5':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
-    typeB:
+    - sysstat
+    - vim-common
+    - emacs
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
-    typeB:
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
 Oracle:
+## install gcc and kernel-headers for git and vmwaretools installation.
   '5':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
-    typeB:
+    - sysstat
+    - vim-common
+    - emacs
+    - gcc
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - gcc
+    - ruby
   '6':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
-    typeB:
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'
 SL:
   '5':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
-    typeB:
+    - sysstat
+    - vim-common
+    - emacs
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - ruby
   '6':
-    typeA:
+    PE:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
     - ! '%end'
-    typeB:
+    FOSS:
     - ! '@core'
-    - ruby
+    - ntp
     - openssh
     - openssh-server
+    - sysstat
+    - vim-common
+    - emacs
+    - git
+    - ruby
     - ! '%end'

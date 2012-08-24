@@ -15,7 +15,7 @@
    Choose `nil` as an initial value if there's no default. 
 
 4. See #build\_from\_seed method in `build_from_seed.rb` and add `something_erb` if necessary.
-   It is recommended to define the path to `lib/origami/inventory/something` in `lib/origami_config.rb` if adding a new directory.
+   It is recommended to define the path to `lib/origami/inventory/something` in `lib/origami_config_private.rb` if adding a new directory.
 
 5. Go to #get\_vars method in `seed_builder.rb`. Add a new key-value pair in the hash such as
    `'something' => ['variable1', 'variable2', 'variable3']`.

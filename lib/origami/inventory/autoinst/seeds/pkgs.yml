@@ -1,10 +1,17 @@
+# SLES needs git installed via post scripts
 ---
 SLES:
   '11':
-    typeA:
-    - liberation-fonts
+    PE:
+    - openssh
+    - ntp
+    - sysstat
+    - vim
     - emacs
-    typeB:
-    - liberation-fonts
+    FOSS:
+    - openssh
+    - ntp
+    - sysstat
+    - vim
     - emacs
-
+    - ruby

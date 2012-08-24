@@ -3,3 +3,5 @@
 junk
 project-snapshot
 products
+tc*
+*_spec.rb

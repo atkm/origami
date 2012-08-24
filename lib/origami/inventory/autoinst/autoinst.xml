@@ -293,13 +293,13 @@
       <groupname>trusted</groupname>
       <userlist></userlist>
     </group>
-    <group>
+    <!--  No Puppet Group.  <group>
       <encrypted config:type="boolean">true</encrypted>
       <gid>106</gid>
       <group_password>!</group_password>
       <groupname>puppet</groupname>
       <userlist></userlist>
-    </group>
+    </group> -->
     <group>
       <encrypted config:type="boolean">true</encrypted>
       <gid>16</gid>
@@ -1385,7 +1385,7 @@
       <user_password>*</user_password>
       <username>haldaemon</username>
     </user>
-    <user>
+    <!-- No Puppet User.  <user>
       <encrypted config:type="boolean">true</encrypted>
       <fullname>Puppet daemon</fullname>
       <gid>106</gid>
@@ -1402,7 +1402,7 @@
       <uid>103</uid>
       <user_password>*</user_password>
       <username>puppet</username>
-    </user>
+    </user> -->
     <user>
       <encrypted config:type="boolean">true</encrypted>
       <fullname>WWW daemon apache</fullname>
